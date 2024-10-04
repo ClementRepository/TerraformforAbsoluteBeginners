@@ -37,9 +37,7 @@ You will learn:
 - How to start a pull request
 
 # Prerequisite downloads/installs
-- Make sure you've made a GitHub account
-- Make sure you git clone the repository (after doing project 1 and 2)
- ```git clone https://github.com/Clemchowdah/TerraformforAbsoluteBeginners.git```
+
 
 
 
