@@ -6,7 +6,7 @@ Amazon Web Services is a widely used cloud provider that hosts many services for
 AWS has resources that are under the "Free Tier," of which you can use for free up until you hit the particular limit of said resource. To learn more, click this link: [aws.amazon.com/free](https://aws.amazon.com/free)
 
 ## Objective
-You will be able sign up for an AWS account, find your public key, and import your public key into the AWS account.
+You will be able sign up for an AWS account, find your public key, and import your public key into the AWS account. This will allow you to connect to AWS in other projects through your terminal.
 
 ## Vocabulary/Additional Reading
 - Key pair: [Key Pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) Do not ever share your private key.
