@@ -16,16 +16,16 @@ You will learn:
 - How to sign up for an AWS account
 - How to create a key pair
 
-## Project 4 Learn Basic Linux Commands Quick Start
+## Project 4: Learn Basic Linux Commands Quick Start
 You will learn:
 - How to use basic linux commands on the terminal 
 - Complete exercises that will combine different commands
 
-## Project 5 File Permissions
+## Project 5: File Permissions
 You will learn:
 - How to change permissions of a file or directory using the symbolic method
 
-## Project 6 Bash Script Quick Start
+## Project 6: Bash Script Quick Start
 You will learn:
 - How to write basic bash scripts that run commands when executed
 
