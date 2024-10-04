@@ -8,8 +8,9 @@ You will be able to create bash scripts that run tasks automatically when execut
 ## Links
 [freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
 
+[learnlinuxtv youtube](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
 
-
+## Explanation and Examples
 ## Exercises
 ### Exercise 1:
 - Create a text file (add .txt to its name) called Test. Check its permissions. Change its permissions to allow all users the ability to read, write and execute the file.
