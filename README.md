@@ -36,4 +36,13 @@ You will learn:
 
 
 # Further Reading and Helpful Links
+
+## Links for learning Linux
+[linuxjourney](https://linuxjourney.com/)
+
+
+[linuxize](https://linuxize.com/)
+
+[linuxcommand](https://linuxcommand.org/index.php)
+
 ![alt text](<laptop and coffee.jpg>)
