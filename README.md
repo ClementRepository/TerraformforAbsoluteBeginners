@@ -21,6 +21,14 @@ You will learn:
 - How to use basic linux commands on the terminal 
 - Complete exercises that will combine different commands
 
+## Project 5 File Permissions
+You will learn:
+- How to change permissions of a file or directory using the symbolic method
+
+## Project 6 Bash Script Quick Start
+You will learn:
+- How to write basic bash scripts that run commands when executed
+
 # Prerequisite downloads/installs
 - Make sure you've made a GitHub account
 - Make sure you git clone the repository (after doing project 1 and 2)
