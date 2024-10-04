@@ -1,6 +1,6 @@
 # Installing Tabby
 ## What is this?
-Tabby is a terminal in which you can run commands for your computer. You don't have to use Tabby's version, there are many other terminals you can download instead.
+Tabby is a terminal in which you can run commands for your computer. You don't have to use the Tabby version, there are many other terminals you can download instead.
 
 ## Objective
 You will be able to install Tabby Terminal on your Windows computer.

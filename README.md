@@ -1,8 +1,7 @@
 # Terraform Adventures: An introduction to Terraform and AWS
 # What is this project?
-This repository contains tasks that go over how to use different tools that coincide with AWS, for anyone just starting out in this field. These tasks will be done using Windows Subsystem for Linux, which will be covered in project 1, and assumes you are using a Windows computer. 
+This repository contains training exercises that go over how to use different tools that coincide with AWS, for anyone  with no prior experience. These tasks will be done using Windows Subsystem for Linux, which will be covered in project 1, and assumes you are using a Windows computer. 
 # Learning Objectives
-
 ## Project 1: Install Windows Subsystem for Linux (WSL)
 You will learn:
 - How to install Windows Subsystem for Linux
@@ -16,7 +15,11 @@ You will learn:
 You will learn:
 - How to sign up for an AWS account
 - How to create a key pair
-- How to use your terminal to configure and connect to your AWS account
+
+## Project 4 Learn Basic Linux Commands Quick Start
+You will learn:
+- How to use basic linux commands on the terminal 
+- Complete exercises that will combine different commands
 
 # Prerequisite downloads/installs
 - Make sure you've made a GitHub account
