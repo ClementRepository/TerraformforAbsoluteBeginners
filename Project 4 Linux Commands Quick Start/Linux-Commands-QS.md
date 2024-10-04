@@ -10,7 +10,7 @@ You will read about basic Linux commands in the articles below, and also utilize
 - [Top 100 Linux Commands You Need to Know](https://www.dreamhost.com/blog/linux-commands/)
 
 ## Exercises*
-*Answers will be attached in an answers text file in this project folder. These exercises are very small and should be supplemented by watching videos and reading documentation.
+*Answers will be attached in an answers text file in this project folder. *These exercises are very small and should be supplemented by watching videos and reading documentation.*
 ### Exercise 1:
 - Go to your home directory. Make a directory named Directory_1. Change from your home directory to get into that directory. Make a file named File1 in there.
 ### Exercise 2:
