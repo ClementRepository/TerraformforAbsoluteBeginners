@@ -32,7 +32,7 @@ You will be able sign up for an AWS account, find your public key, and import yo
 ![alt text](<importkeypair.jpg>)
 
 8. Enter a name for your key pair.
-9. Open up your tabby terminal if you haven't. Type ```wsl```
+9. Open up your tabby terminal if you haven't. Type ```wsl``` to start WSL.
 10. Type ```cd ~``` to go to your home directory.
 11. Type ```cd .ssh``` to go into your ssh directory.
 12. Type ```ls``` to see files in there. You will see id_ed25519.pub, which is where your public key is located.
