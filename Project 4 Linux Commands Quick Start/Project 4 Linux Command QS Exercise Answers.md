@@ -1,4 +1,4 @@
-# Project 4 Linux Commands Exercise Answers
+# Project 4 Linux Commands QS Exercise Answers
 ## Exercise 1:
 ```
     mkdir Directory_1
