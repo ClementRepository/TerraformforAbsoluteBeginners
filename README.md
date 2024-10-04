@@ -45,4 +45,9 @@ You will learn:
 
 [linuxcommand](https://linuxcommand.org/index.php)
 
-![alt text](<laptop and coffee.jpg>)
+[freelinuxcourses](https://itsfoss.com/free-linux-training-courses/)
+
+[linuxin5days](https://www.linuxtrainingacademy.com/itsfoss-ll5d/
+)
+## Links for learning bash scripting
+[LearnLinuxTV(Youtube link)](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
