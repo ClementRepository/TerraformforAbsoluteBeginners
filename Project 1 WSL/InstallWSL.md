@@ -8,4 +8,4 @@ You will be able to install WSL or Windows Subsystem for Linux on your Windows c
 ## Steps
 1. In your windows search bar (bottom of your screen), type in "command prompt", or "powershell." Click on the result.
 2. type in the command ```wsl --install```
-3. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal and VSCode for further tasks.
+3. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal for further tasks.

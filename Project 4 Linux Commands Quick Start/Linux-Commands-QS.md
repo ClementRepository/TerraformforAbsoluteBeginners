@@ -5,10 +5,12 @@ Linux commands allow users to give instructions to the computer that it then exe
 ## Objective
 You will read about basic Linux commands in the articles below, and also utilize what you've learned to complete exercises given within the Tabby Terminal.
 
-## Vocabulary/Additional Reading
+##  Reading Links
 - [Top 50 Linux Commands You Must Know](https://www.digitalocean.com/community/tutorials/linux-commands)
 - [Top 100 Linux Commands You Need to Know](https://www.dreamhost.com/blog/linux-commands/)
 
+## Other Commands
+```man```: running "man", followed by a tool/function, such as ls or touch, will bring up a manual explaining how to use the tool or function. The syntax could look like this: ```man ls```
 ## Exercises*
 *Answers will be attached in an answers text file in this project folder. *These exercises are very small and should be supplemented by watching videos and reading documentation.*
 ### Exercise 1:
