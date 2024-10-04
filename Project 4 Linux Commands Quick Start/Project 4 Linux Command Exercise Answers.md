@@ -19,13 +19,9 @@
     sudo apt install nano
     nano File1
 ```
-    _____________________
-    **When inside the nano editor**:
-    type hello world
-    press both ctrl x
-    press y 
-    press enter
-    ______________________
+```
+    hello world
+```    
 ```
     cat File1
 ```
