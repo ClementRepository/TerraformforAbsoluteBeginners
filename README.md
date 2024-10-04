@@ -11,7 +11,7 @@ You will learn:
 - How to install Tabby Terminal
 
 ## Project 3: Sign up for Amazon Web Services
-### Note: You will have to sign up with a credit card that will be attached to the account.
+_Note: You will have to sign up with a credit card that will be attached to the account. Charges may apply when completing later exercises._
 You will learn:
 - How to sign up for an AWS account
 - How to create a key pair
