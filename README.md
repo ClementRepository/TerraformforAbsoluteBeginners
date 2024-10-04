@@ -29,10 +29,18 @@ You will learn:
 You will learn:
 - How to write basic bash scripts that run commands when executed
 
+## Project 7 Git and Github Quick Start
+You will learn:
+- How to download git and sign up for a Github account
+- How to create a github repository
+- How to utilize git commands to commit files to Github
+- How to start a pull request
+
 # Prerequisite downloads/installs
 - Make sure you've made a GitHub account
 - Make sure you git clone the repository (after doing project 1 and 2)
  ```git clone https://github.com/Clemchowdah/TerraformforAbsoluteBeginners.git```
+
 
 
 # Further Reading and Helpful Links
