@@ -6,6 +6,9 @@ This guide assumes you have never installed WSL on your computer. WSL allows any
 You will be able to install WSL or Windows Subsystem for Linux on your Windows computer.
 
 ## Steps
-1. In your windows search bar (bottom of your screen), type in "command prompt", or "powershell." Click on the result.
-2. type in the command ```wsl --install```
-3. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal for further tasks.
+1. In your windows search bar (bottom of your screen), type in "Turn Windows features On and Off" and click on the result.
+2. Scroll down the options until you see Windows Subsystem for Linux and make sure the box is checked for that option.
+3. In your windows search bar (bottom of your screen), type in "command prompt", or "powershell." Click on the result.
+4. type in the command ```wsl --install```
+5. You'll need to restart your computer.
+6. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal for further tasks.
