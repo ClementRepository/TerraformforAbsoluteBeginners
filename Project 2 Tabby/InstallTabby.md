@@ -13,4 +13,4 @@ You will be able to install Tabby Terminal on your Windows computer.
 5. Go to your downloads.
 6. Click and run the .exe file from step 3 when you find it.
 7. You can now go to your search bar at the bottom and search for tabby terminal. Click it to start. (You will need to setup an account.)
-8. To start, type in ```wsl``` after you're done setting up the account.
+8. To start, type in ```wsl``` after you're done setting up the account. Press enter, and it should be ready to go!
