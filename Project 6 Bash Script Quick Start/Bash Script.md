@@ -9,6 +9,7 @@ You will be able to create bash scripts using Linux Commands from previous lesso
 - bash: A Shell program that processes commands in the Linux Terminal.
 - Shebang: The first line of a bash script, forming a path to the bash system.
 - .sh: The regular file type name used for denoting a bash script.
+- string: a sequence of characters that represents text for programming purposes, enclosed within quotation marks.
 
 ## Links
 [freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
@@ -83,14 +84,28 @@ In this example, age=22 is the variable. When age is put into the brackets, it n
 
 ```ne``` means not equal to
 
-When comparing non-numbers,
-```=``` means equal to (make sure there are spaces between the = and the compared items)
+When comparing non-numbers(called string for this example), make sure you have double brackets for the below characters.
+```=``` means equal to (make sure there are spaces between the = )
 
 ```!=``` means not equal to.
 
 ```<``` less than
 
 ```>``` greater than
+
+Here's an example below for string variables.
+
+```
+#!/bin/bash
+word="nice"
+if [[ $word = "nice" ]]
+then echo "That's very nice."
+else
+echo "That's not nice."
+fi
+```
+
+The output would say ```"That's very nice."``` when you execute it since the word variable did in fact equal to nice. Remember to have quotation marks around a string variable!
 __________________________________________
 
 **While loops:** As long as something is true, then a command will keep executing, such as having a variable or when you need user input. 
