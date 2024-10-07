@@ -206,7 +206,3 @@ This example uses the ```read``` command with a ```-p``` flag. This means that a
 
 _Answer is found in agequestion.sh in the same github folder._
 
-### Exercise 2:
-- Create a bash script file in your home directory that will ask the user how many siblings they have. Have the script create a file named 2.txt if they have 2 or more siblings, and a file named 1.txt if they have less than 2 sibling. 
-
-_Answer is found in siblings.sh in the same github folder._
