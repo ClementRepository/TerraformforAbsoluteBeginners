@@ -1,18 +1,16 @@
-# Using Git and Navigating Github
+# Using Git, Github, and VsCode
 ## What is this?
-Bash scripting allows the user to execute commands in sequence from one file, thus saving time.
+Git is meant to handle projects of varying sizes and tracking changes in code. Github uses Git to store projects and code so that developers can share and work on projects together. Visual Studio Code, or VsCode, is a code editor where users can integrate different programs and programming languages to complete their coding needs.
 
 ## Objective
-You will be able to create bash scripts that run tasks automatically when executed from the command terminal.
+You will be able to download Git, create and use a Github account, and download VsCode while pushing content from VsCode into a Github Repository.
 
 ## Links
-[freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
+[w3schools git tutorial](https://www.w3schools.com/git/)
 
-[learnlinuxtv youtube](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
+## Vocabulary/Commands:
+
 
 ## Explanation and Examples
 ## Exercises
 ### Exercise 1:
-- Create a text file (add .txt to its name) called Test. Check its permissions. Change its permissions to allow all users the ability to read, write and execute the file.
-### Exercise 2:
-- Using the text file (Test.txt) from exercise 1, remove write and execute permissions from groups and others. Check its permissions afterward to confirm.
