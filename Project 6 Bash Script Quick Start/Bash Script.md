@@ -1,9 +1,14 @@
 # Bash scripting
 ## What is this?
-Bash scripting allows the user to execute commands in sequence from one file, thus saving time.
+Bash scripting allows the user to execute commands in sequence from one file and automate different tasks accordingly.
 
 ## Objective
-You will be able to create bash scripts that run tasks automatically when executed from the command terminal.
+You will be able to create bash scripts using Linux Commands from previous lessons.
+
+## Vocabulary
+- bash: A Shell program that processes commands in the Linux Terminal.
+- Shebang: The first line of a bash script, forming a path to the bash system.
+- .sh: The regular file type name used for denoting a bash script.
 
 ## Links
 [freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
@@ -11,6 +16,53 @@ You will be able to create bash scripts that run tasks automatically when execut
 [learnlinuxtv youtube](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
 
 ## Explanation and Examples
+A bash script essentially allows someone to run tasks automatically and thus raise efficiency in getting started. We will go over a few visual example below that shows how that works, as well as different ways to use the bash script.
+
+Usually after you write a bash script, you will need to use the ```chmod``` followed by the file permissions, then the file name.
+
+```chmod u+x script.sh``` to give execute permissions to the user.
+
+Then ```./script.sh```, in which ```./``` means to execute ```script.sh```.
+
+
+
+## Parts of a Bash Script and Possible Variations
+_Note: Example bash scripts are attached for your reading._
+
+**Shebang:** A bash script starts with a shebang, usually #!/bin/bash. This basically allows the system to know that this file is a bash script with that shebang.
+
+**Comments:** Sometimes developers want to have a line that explains something within the script, so they might add a # before writing a sentence. Doing so prevents your computer from executing it as a command. If you remove the # sign, it will read that line as a command.
+
+_See command and comment.sh for an example of the shebang, a command, and a comment line._
+____________________________________________
+**Variables:** Variables help a user store data as they write the script, replacing an item so that it can be placed within other parts of the script to keep it going. Usually it has an = sign to begin with.
+
+**If Statements:** If statements help check if something is true before executing another command, while ```else``` also tells what happens if the condition isn't met.
+
+```#!/bin/bash
+    age=21
+    
+    if [age -gt 20]
+    
+    then
+    
+    echo "You're at least twenty."
+    
+    else
+
+    echo "You're not yet twenty."
+```
+
+
+_See ifvariables.sh for an example that uses both a variable and a conditional if/else statement to run commands._
+
+**While loops:** As long as something is true, then a command will keep executing, such as having a variable or when you need user input. 
+
+**For loops:** This is meant to run a loop for a certain number of times. In contrast to while loops, for loops should be used if you know how many times something needs to run.
+
+**User input:** Sometimes a script can ask someone to input information and then be able to execute another command.
+
+
 ## Exercises
 ### Exercise 1:
 - Create a text file (add .txt to its name) called Test. Check its permissions. Change its permissions to allow all users the ability to read, write and execute the file.
