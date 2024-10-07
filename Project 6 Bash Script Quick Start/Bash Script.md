@@ -40,7 +40,7 @@ Then ```./script.sh```, in which ```./``` means to execute ```script.sh```.
 ```
     #!/bin/bash
     #this is a comment, and the command is below.
-    echo "This is a command, since it doesn't start with a # sign."
+    echo "This is a command since it doesn't start with a # sign"
 ```
 
 ____________________________________________
@@ -126,6 +126,30 @@ do
     command2
 done
 ```
+Multiple commands can be run one after another while the condition is met. ```do``` basically works like the ```then``` command from before. Unlike if/then bash scripts, while and for use ```done``` at the end. Let's look at an example filled in:
+
+```
+#!/bin/bash
+number=1
+while [ $number -le 5 ]; 
+do
+echo "The Number is: $number"
+((number++))
+done
+```
+
+In this example, the variable is set as number, equal to 1. While the number is less than or equal to 5, it would echo an output that will tell you the number. Under the echo command, the ```((number++))``` means that the variable, in this case number, would increment/increase by 1. You can also do ```((number+=1))```.
+
+Conversely, if you wanted to decrease the number, you can make a bash script using the ```until``` command:
+```
+#!/bin/bash
+number=5
+until [ $number -le 0 ];
+do
+echo "The Number is: $number"
+((number--))
+done
+```
 __________________________________________
 
 **User input:** Sometimes a script can ask someone to input information and then be able to execute another command.
@@ -148,7 +172,7 @@ This example uses the ```read``` command with a ```-p``` flag. This means that a
 5. Make an if statement with brackets
 6. Write a then statement with a command
 7. Write an else statement with a command
-8. type ```fi``` to finish your bash script (unless it's using a for/while loop, then type ```end```.)
+8. type ```fi``` to finish your bash script 
 9. ```chmod +x script.sh``` to give permissions to execute
 10. ```./script.sh``` to execute the script
  
@@ -156,5 +180,9 @@ This example uses the ```read``` command with a ```-p``` flag. This means that a
 ### Exercise 1:
 - Create a bash script file in your home directory. In that script, ask the user to input their age. Using an if/else statement, if they are above the age of 18, have the output tell them that they are an adult. If they are not above 18, have the output tell the user that they are not an adult.
 
+_Answer is found in agequestion.sh in the same github folder._
+
 ### Exercise 2:
-- Create a bash script file in your home directory.
+- Create a bash script file in your home directory that will ask the user how many siblings they have. Using what you know from this, have the script create a file named 2.txt if they have 2 or more siblings, and a file named 1.txt if they have less than 2 siblings.
+
+_Answer is found in siblings.sh in the same github folder._
