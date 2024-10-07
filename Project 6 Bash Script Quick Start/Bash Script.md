@@ -124,6 +124,8 @@ while [ condition ];
 do
     command1
     command2
+done
+```
 __________________________________________
 
 **User input:** Sometimes a script can ask someone to input information and then be able to execute another command.
