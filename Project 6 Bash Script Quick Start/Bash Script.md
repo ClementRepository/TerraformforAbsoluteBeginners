@@ -5,7 +5,7 @@ Bash scripting allows the user to execute commands in sequence from one file and
 ## Objective
 You will be able to create simple bash scripts using Linux Commands from previous lessons.
 
-_Note: This is only considered a basic guide, it is recommended to watch or read links from the below section for more detailed lessons."
+_Note: This is only considered a basic guide, it is recommended to watch or read links from the below section for more detailed lessons."_
 ## Vocabulary
 - bash: A Shell program that processes commands in the Linux Terminal.
 - Shebang: The first line of a bash script, forming a path to the bash system.
@@ -116,7 +116,14 @@ __________________________________________
 
 **For loops:** This is meant to run a loop for a certain number of times. In contrast to while loops, for loops should be used if you know how many times something needs to run.
 
+While loops follow a certain syntax-as long as a condition is seen as true, it will keep doing the commands listed underneath. See below:
 
+```
+#!/bin/bash
+while [ condition ];
+do
+    command1
+    command2
 __________________________________________
 
 **User input:** Sometimes a script can ask someone to input information and then be able to execute another command.
@@ -139,12 +146,13 @@ This example uses the ```read``` command with a ```-p``` flag. This means that a
 5. Make an if statement with brackets
 6. Write a then statement with a command
 7. Write an else statement with a command
-8. type ```fi``` to finish your bash script
+8. type ```fi``` to finish your bash script (unless it's using a for/while loop, then type ```end```.)
 9. ```chmod +x script.sh``` to give permissions to execute
 10. ```./script.sh``` to execute the script
  
 ## Exercises
 ### Exercise 1:
-- Create a bash script file in your home directory. In that script, ask the user to input their age. Using an if/else statement, if they are above the age of 18, make the output say "You are an adult." If they are not above 18, make the output "You are not an adult."
+- Create a bash script file in your home directory. In that script, ask the user to input their age. Using an if/else statement, if they are above the age of 18, have the output tell them that they are an adult. If they are not above 18, have the output tell the user that they are not an adult.
 
 ### Exercise 2:
+- Create a bash script file in your home directory.
