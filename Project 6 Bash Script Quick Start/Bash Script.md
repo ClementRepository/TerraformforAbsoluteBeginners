@@ -40,25 +40,9 @@ _Note: Example bash scripts are attached for your reading._
 ```
 
 ____________________________________________
-**Variables:** Variables help a user store data as they write the script, replacing an item so that it can be placed within other parts of the script to keep it going. Usually it has an = sign to begin with.
+**Variables:** Variables help a user store data as they write the script, replacing an item so that it can be placed within other parts of the script to keep it going. Usually it has an = sign to begin with. Once you set up a variable, when you write it into the script, you'll need to have a ```$``` prior to the variable. 
 
 **If Statements:** If statements help check if something is true before executing another command, while ```else``` also tells what happens if the condition isn't met.
-
-```
-    #!/bin/bash
-    age=21
-    
-    if [age -gt 20]
-    
-    then
-    
-    echo "You're at least twenty."
-    
-    else
-
-    echo "You're not yet twenty."
-```
-In the above example, if/then statements usually follow
 
 ```
 #!/bin/bash
@@ -71,6 +55,42 @@ fi
 ```
 
 Explanation: After the shebang on the first line, the "if" line has a condition in brackets that would activate the next "then" line command if it is met. If that condition is not met, then the command in the "else" line would be executed instead. Finally, fi basically means to finish the if/else statement.
+
+```
+ #!/bin/bash
+
+age=22
+
+if [ $age -gt 20 ]
+then
+echo "You are older than 20."
+else
+echo "You are not older than 20."
+fi
+```
+
+In this example, age=22 is the variable. When age is put into the brackets, it needs to have $ before it so that the computer can understand that the variable is in place, in this case, $age shows that it equals 22. Inside the condition bracket, there is a "gt". When comparing a number, there are several possibilities:
+
+```eq``` means equal to
+
+```gt``` means greater than
+
+```ge``` means greater or equal to
+
+```le``` means less than or equal to
+
+```lt``` means less than
+
+```ne``` means not equal to
+
+When comparing non-numbers,
+```=``` means equal to (make sure there are spaces between the = and the compared items)
+
+```!=``` means not equal to.
+
+```<``` less than
+
+```>``` greater than
 __________________________________________
 
 **While loops:** As long as something is true, then a command will keep executing, such as having a variable or when you need user input. 
