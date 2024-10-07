@@ -33,7 +33,7 @@ _Note: Example bash scripts are attached for your reading._
 
 **Comments:** Sometimes developers want to have a line that explains something within the script, so they might add a # before writing a sentence. Doing so prevents your computer from executing it as a command. If you remove the # sign, it will read that line as a command.
 
-_See command and comment.sh for an example of the shebang, a command, and a comment line._
+
 ____________________________________________
 **Variables:** Variables help a user store data as they write the script, replacing an item so that it can be placed within other parts of the script to keep it going. Usually it has an = sign to begin with.
 
@@ -52,9 +52,20 @@ ____________________________________________
 
     echo "You're not yet twenty."
 ```
+In the above example, if/then statements usually follow
 
+```
+#!/bin/bash
+if [condition is true];
+then
+execute commands
+else
+execute these commands instead
+fi
+```
 
-_See ifvariables.sh for an example that uses both a variable and a conditional if/else statement to run commands._
+Explanation: After the shebang on the first line, the "if" line has a condition in brackets that would activate the next "then" line command if it is met. If that condition is not met, then the command in the "else" line would be executed instead. Finally, fi basically means to finish the if/else statement.
+__________________________________________
 
 **While loops:** As long as something is true, then a command will keep executing, such as having a variable or when you need user input. 
 
