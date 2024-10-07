@@ -33,6 +33,10 @@ _Note: Example bash scripts are attached for your reading._
 
 **Comments:** Sometimes developers want to have a line that explains something within the script, so they might add a # before writing a sentence. Doing so prevents your computer from executing it as a command. If you remove the # sign, it will read that line as a command.
 
+```#!/bin/bash
+    #this is a comment, and the command is below.
+    echo "This is a command, since it doesn't start with a # sign."
+```
 
 ____________________________________________
 **Variables:** Variables help a user store data as they write the script, replacing an item so that it can be placed within other parts of the script to keep it going. Usually it has an = sign to begin with.
