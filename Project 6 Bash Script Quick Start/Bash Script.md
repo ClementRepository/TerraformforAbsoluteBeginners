@@ -10,13 +10,14 @@ You will be able to create bash scripts using Linux Commands from previous lesso
 - Shebang: The first line of a bash script, forming a path to the bash system.
 - .sh: The regular file type name used for denoting a bash script.
 - string: a sequence of characters that represents text for programming purposes, enclosed within quotation marks.
+- ```read```: read is a command that takes whatever a user may type in, or input, and stores it within a variable for other uses.
 
 ## Links
 [freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
 
 [learnlinuxtv youtube](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
 
-## Explanation and Examples
+## Explanation 
 A bash script essentially allows someone to run tasks automatically and thus raise efficiency in getting started. We will go over a few visual example below that shows how that works, as well as different ways to use the bash script.
 
 Usually after you write a bash script, you will need to use the ```chmod``` followed by the file permissions, then the file name.
@@ -27,8 +28,9 @@ Then ```./script.sh```, in which ```./``` means to execute ```script.sh```.
 
 
 
+
 ## Parts of a Bash Script and Possible Variations
-_Note: Example bash scripts are attached for your reading._
+
 
 **Shebang:** A bash script starts with a shebang, usually #!/bin/bash. This basically allows the system to know that this file is a bash script with that shebang.
 
@@ -41,9 +43,10 @@ _Note: Example bash scripts are attached for your reading._
 ```
 
 ____________________________________________
+
 **Variables:** Variables help a user store data as they write the script, replacing an item so that it can be placed within other parts of the script to keep it going. Usually it has an = sign to begin with. Once you set up a variable, when you write it into the script, you'll need to have a ```$``` prior to the variable. 
 
-**If Statements:** If statements help check if something is true before executing another command, while ```else``` also tells what happens if the condition isn't met.
+**If Statements:** If statements help check if something is true before executing another command, while ```else``` also tells what happens if the condition isn't met. The condition is in the bracket (double bracket if it's a string rather than comparing numbers.)
 
 ```
 #!/bin/bash
@@ -105,18 +108,39 @@ echo "That's not nice."
 fi
 ```
 
-The output would say ```"That's very nice."``` when you execute it since the word variable did in fact equal to nice. Remember to have quotation marks around a string variable!
+Since the variable is a string (mind the quotation marks for string), there is a double bracket for the variable condition. ```$word = "nice"``` so,the output would say ```"That's very nice."``` when you execute it since the word variable did in fact equal to nice. **Remember to have quotation marks around a string variable, and double bracket the condition!**
 __________________________________________
 
 **While loops:** As long as something is true, then a command will keep executing, such as having a variable or when you need user input. 
 
 **For loops:** This is meant to run a loop for a certain number of times. In contrast to while loops, for loops should be used if you know how many times something needs to run.
 
+
+__________________________________________
+
 **User input:** Sometimes a script can ask someone to input information and then be able to execute another command.
 
+```
+#!/bin/bash
 
+read -p "Enter your name: " name
+echo "Hello, $name! Welcome to the script."
+```
+
+This example uses the ```read``` command with a ```-p``` flag. This means that a prompt will be displayed and will wait for user input. When writing a prompt, make sure you have a space, then ```"```. This is the proper syntax for allowing input. For example, if it was ```"What is your age? "``` Think of the space between the ```?``` and the ```"``` as where you'd put in your age. What you type in (and press enter) will be considered as the "name" for the above example. Hence, $name will reference what you typed. Copy and paste this into an empty script file, change the permissions to allow execute, then run it!
+
+
+## Steps for an example if/else with variable.
+1. ```touch script.sh``` (name the script anything you want)
+2. ```nano script.sh```
+3. Add shebang ```#!/bin/bash``` to the first line
+4. Add your variable if there is one.
+5. Make an if statement with brackets
+6. Write a then statement with a command
+7. Write an else statement with a command
+8. type ```fi``` to finish your bash script
+9. ```chmod +x script.sh``` to give permissions to execute
+10. ```./script.sh``` to execute the script
+ 
 ## Exercises
 ### Exercise 1:
-- Create a text file (add .txt to its name) called Test. Check its permissions. Change its permissions to allow all users the ability to read, write and execute the file.
-### Exercise 2:
-- Using the text file (Test.txt) from exercise 1, remove write and execute permissions from groups and others. Check its permissions afterward to confirm.
