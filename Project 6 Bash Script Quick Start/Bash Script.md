@@ -12,6 +12,7 @@ _Note: This is only considered a basic guide, it is recommended to watch or read
 - .sh: The regular file type name used for denoting a bash script.
 - string: a sequence of characters that represents text for programming purposes, enclosed within quotation marks.
 - ```read```: read is a command that takes whatever a user may type in, or input, and stores it within a variable for other uses.
+- ```Ctrl C```: pressing ctrl, and c together will allow you to leave the current function if you get stuck.
 
 ## Links
 [freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
@@ -150,6 +151,29 @@ echo "The Number is: $number"
 ((number--))
 done
 ```
+
+For loops, in contrast to while loops, will go through information given repeatedly, whether it be numbers or a command.
+
+```
+#!/bin/bash
+for i in {1..8}
+do
+echo "This has worked $i times."
+done
+```
+In the above example, the variable i is whatever number is in the range of 1 to 8. You'd use curly brackets to keep a range, (or type 1 2 3 4 5 6 7 8 without any brackets.) The output would be:
+
+```
+This has worked 1 times.
+This has worked 2 times.
+This has worked 3 times.
+This has worked 4 times.
+This has worked 5 times.
+This has worked 6 times.
+This has worked 7 times.
+This has worked 8 times.
+```
+
 __________________________________________
 
 **User input:** Sometimes a script can ask someone to input information and then be able to execute another command.
@@ -183,6 +207,6 @@ This example uses the ```read``` command with a ```-p``` flag. This means that a
 _Answer is found in agequestion.sh in the same github folder._
 
 ### Exercise 2:
-- Create a bash script file in your home directory that will ask the user how many siblings they have. Using what you know from this, have the script create a file named 2.txt if they have 2 or more siblings, and a file named 1.txt if they have less than 2 siblings.
+- Create a bash script file in your home directory that will ask the user how many siblings they have. Have the script create a file named 2.txt if they have 2 or more siblings, and a file named 1.txt if they have less than 2 sibling. 
 
 _Answer is found in siblings.sh in the same github folder._
