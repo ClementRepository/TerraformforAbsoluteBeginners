@@ -57,3 +57,5 @@ If you do not have a Github account to clone the repository, Project 7 has relev
 )
 ## Links for learning bash scripting
 [LearnLinuxTV(Youtube link)](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
+
+[freecodecamp bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
