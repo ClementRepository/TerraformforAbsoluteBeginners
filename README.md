@@ -37,7 +37,7 @@ You will learn:
 - How to start a pull request
 
 # Prerequisite downloads/installs
-
+If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.
 
 
 
