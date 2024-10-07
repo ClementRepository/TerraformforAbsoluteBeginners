@@ -74,7 +74,7 @@ echo "You are not older than 20."
 fi
 ```
 
-In this example, age=22 is the variable. When age is put into the brackets, it needs to have $ before it so that the computer can understand that the variable is in place, in this case, $age shows that it equals 22. Inside the condition bracket, there is a "gt". When comparing a number, there are several possibilities:
+In this example, age=22 is the variable. When age is put into the brackets, it needs to have $ before it so that the computer can understand that the variable is in place, in this case, $age shows that it equals 22. Inside the condition bracket, there is a "gt" (make sure there's a "-" before it). When comparing a number, there are several possibilities:
 
 ```eq``` means equal to
 
@@ -145,3 +145,6 @@ This example uses the ```read``` command with a ```-p``` flag. This means that a
  
 ## Exercises
 ### Exercise 1:
+- Create a bash script file in your home directory. In that script, ask the user to input their age. Using an if/else statement, if they are above the age of 18, make the output say "You are an adult." If they are not above 18, make the output "You are not an adult."
+
+### Exercise 2:
