@@ -29,7 +29,7 @@ You will learn:
 You will learn:
 - How to write basic bash scripts that run commands when executed
 
-## Project 7 Git and Github Quick Start
+## Project 7 Using Git Github VsCode
 You will learn:
 - How to download git and sign up for a Github account
 - How to create a github repository
