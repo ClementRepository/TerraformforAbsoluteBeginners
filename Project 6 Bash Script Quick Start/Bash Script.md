@@ -33,7 +33,8 @@ _Note: Example bash scripts are attached for your reading._
 
 **Comments:** Sometimes developers want to have a line that explains something within the script, so they might add a # before writing a sentence. Doing so prevents your computer from executing it as a command. If you remove the # sign, it will read that line as a command.
 
-```#!/bin/bash
+```
+    #!/bin/bash
     #this is a comment, and the command is below.
     echo "This is a command, since it doesn't start with a # sign."
 ```
@@ -43,7 +44,8 @@ ____________________________________________
 
 **If Statements:** If statements help check if something is true before executing another command, while ```else``` also tells what happens if the condition isn't met.
 
-```#!/bin/bash
+```
+    #!/bin/bash
     age=21
     
     if [age -gt 20]
