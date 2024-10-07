@@ -3,8 +3,9 @@
 Bash scripting allows the user to execute commands in sequence from one file and automate different tasks accordingly.
 
 ## Objective
-You will be able to create bash scripts using Linux Commands from previous lessons.
+You will be able to create simple bash scripts using Linux Commands from previous lessons.
 
+_Note: This is only considered a basic guide, it is recommended to watch or read links from the below section for more detailed lessons."
 ## Vocabulary
 - bash: A Shell program that processes commands in the Linux Terminal.
 - Shebang: The first line of a bash script, forming a path to the bash system.
