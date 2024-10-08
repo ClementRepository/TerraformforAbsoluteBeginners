@@ -8,6 +8,13 @@ You will be able to download Git, create and use a Github account, and download 
 ## Links
 [w3schools git tutorial](https://www.w3schools.com/git/)
 
+[git download](https://git-scm.com/downloads/win)
+
+[git explanations and videos](https://git-scm.com/doc)
+
+[git and github how they work together](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
+
+
 ## Vocabulary/Commands:
 
 
