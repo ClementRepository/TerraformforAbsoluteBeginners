@@ -26,7 +26,9 @@ You will be able to download Git, create and use a Github account, and download 
 5.
 
 ## Github Set Up
-
+1. Go to [github](github.com) and click sign up.
+2. Sign up for an account.
+3. Find the "+" sign and it should have a drop down menu.
 ## VsCode Set Up
 
 ## Vocabulary/Commands:
@@ -35,6 +37,18 @@ You will be able to download Git, create and use a Github account, and download 
 ```git config```
 
 ```git status```
+
+```git add```
+
+```git commit -m```
+
+```git branch```
+
+```git log```
+
+```git fetch origin```
+
+branch:
 
 ## Explanation and Examples
 ## Exercises
