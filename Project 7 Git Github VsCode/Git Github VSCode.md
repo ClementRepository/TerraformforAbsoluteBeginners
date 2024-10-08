@@ -19,9 +19,9 @@ You will be able to download Git, create and use a Github account, and download 
 
 
 ## Git Download and Set Up
-1. click the link and download the 64 bit Git for Windows Setup
-2. Install Git
-3. Open up Tabby Terminal or any terminal that can run WSL
+1. click the link [git download](https://git-scm.com/downloads/win) and download the 64 bit Git for Windows Setup.
+2. Install Git.
+3. Open up Tabby Terminal or any terminal that can run WSL.
 4. run the command ```git --version``` (If it has an output of git followed by a version, you're good to go!)
 5.
 
@@ -30,7 +30,11 @@ You will be able to download Git, create and use a Github account, and download 
 ## VsCode Set Up
 
 ## Vocabulary/Commands:
+```git --version``` will tell you what version of git has been downloaded.
+
 ```git config```
+
+```git status```
 
 ## Explanation and Examples
 ## Exercises
