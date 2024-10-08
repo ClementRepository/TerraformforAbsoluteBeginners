@@ -101,6 +101,5 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 ## VsCode Set Up
 
 
-## Explanation and Examples
 ## Exercises
 ### Exercise 1:
