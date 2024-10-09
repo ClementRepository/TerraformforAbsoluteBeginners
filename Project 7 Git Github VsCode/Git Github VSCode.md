@@ -141,6 +141,6 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 
 _**Troubleshooting Note: Sometimes there's an error that states that git username and email haven't been set up despite doing so earlier in the steps when you try to commit from VsCode.**_
 
-Do ```git config --global -e``` in your terminal and it will open up a text editor that will allow you to change your username and email with the global option manually. Ctrl x, then y to leave and save that._
+_Do ```git config --global -e``` in your terminal and it will open up a text editor that will allow you to change your username and email with the global option manually. Ctrl x, then y to leave and save that._
 ## Exercises
 ### Exercise 1:
