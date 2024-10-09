@@ -22,31 +22,41 @@ You will be able to download Git and commit your work, create and use a Github a
 [git with vscode](https://www.youtube.com/watch?v=i_23KUAEtUM&list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6&index=2)
 
 ## Vocabulary/Commands:
+
+### Git Commands:
 ```git --version``` will tell you what version of git has been downloaded.
 
-```git config``` will set up your git account. Please refer to step 5 of Git Set up.
+```git config``` will set up your git account. (Step 5 of Git Set up)
 
-```git status```
+```git status``` allows you to look at the branch you're on, what files are on on track, and what is untracked.
 
-```git add```
+```git add``` allows you to add files to be staged, or ready to be committed and pushed to Github. (Step 12 of Git Set Up)
 
-```git commit -m```
+```git commit -m``` sets up files that are already staged and thus commits to the repository.
 
-```git branch```
+```git branch``` sets up a different path for files to follow. (Step 15 of Git Set Up)
 
-```git log```
+```git log``` checks what has been committed and pushed.
 
-```git fetch origin```
+```git fetch origin``` takes commits, and files from a remote repository into your local repository.
 
-```git branch```
+```git checkout``` tells Git what branch or commit you want to apply changes to. (Step 16 of Git Set Up)
 
-untracked
+### Github Vocabulary
 
-repository
+Pull Request: When pushing changes to a repository that isn't yours, it will become a pull request. The owner of that repository can accept or deny the pull request to update the file in question.
 
-readme
+Repository/Repo: A storage area for code and files of a project.
 
-extensions
+Readme: Repositories usually have a readme file that explains what the project or repository is for.
+
+### VsCode Vocabulary
+
+Explorer: The first option on the left of VsCode that shows a directory of files you're working on.
+
+Extensions: The fifth option on the left of VsCode that allows you to install different tools to support your coding needs.
+
+Source Control: The third option on the left of VsCode that tracks your changes, commits, and other git functions.
 
 ## Git Set Up
 1. click the link [git download](https://git-scm.com/downloads/win) and download the latest Windows version of Git.
