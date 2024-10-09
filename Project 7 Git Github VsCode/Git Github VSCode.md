@@ -24,7 +24,7 @@ You will be able to download Git and commit your work, create and use a Github a
 ## Vocabulary/Commands:
 ```git --version``` will tell you what version of git has been downloaded.
 
-```git config```
+```git config``` will set up your git account. Please refer to step 5 of Git Set up.
 
 ```git status```
 
@@ -110,20 +110,31 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 1. Go to VsCode's download page [vscode download](https://code.visualstudio.com/download) and click Windows in blue to download.
 2. Open up Visual Studio Code when it's done.
 3. On the left, there is a logo with 5 squares, called extensions. Click on it.
+![alt text](<wsl vs.png>)
+
 4. When the search bar option is available, you need to search for "WSL" and "GitHub Pull Requests". Make sure both are installed.
+
+![alt text](<github pull requests.png>)
+
 5. After installing, on the bottom left of the vertical bar of the vscode window you should see a cog wheel and a person button. That should be the accounts button, where you click on it for a dropdown.  
 6. There should be an option that says "Sign in with Github to use Github Pull Requests". Click on that.
 7. It will open up your web browser, where you log in with your Github account. Once you log in, press continue if the information is correct.
 8. Then click Authorize Visual Studio Code.
 9. After that, go to VsCode again. If need be, click file on the top left and click new window. It will bring you to a welcome page.
 10. Click "Clone Git Repository." It'll have a dropdown on the top search bar asking you to clone from Github. Click that as well.
+
+![alt text](<vscode new window.png>)
+
 11. Then, click the repository that you had set up prior with the Github instructions. It will open up and ask you to set a folder for these files. Right click in the white space, choose new->folder from the drop down when it appears. Rename the folder to whatever you like by right clicking the new folder.
 12. It will request authorization from Git Credential Manager. Authorize that as well. 
 13. Once you have everything authorized, it should have your readme file listed. See picture below.
 14. After everything is set, you can drag the bottom of VsCode up (where it will show an up and down arrow) to open up its own terminal. It should initially say "powershell", but you can find an arrow that will open up a drop down menu (that originally says Launch Profile, next to a plus sign). Choose Ubuntu WSL to start using the terminal.
+
+![alt text](<vscode terminal.jpg>)
+
 15. After that, you will see that the terminal is open to the folder that you cloned the repository to.
 
-## VsCode Push files to Github Exercise:
+## VsCode Push files to Github Example:
 ### Goal: You will be able to commit and push a file to your repository.
 1. Under file on the top left of VsCode, choose new text file. Type something in and save it.
 2. You might see a little "1" on the left bar. Hover over it (Source Control) and click it.
@@ -132,8 +143,14 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 4. Under "Changes", where you'll see a "1" as well, hover over the file name. Click the "+" sign to stage it.
 5. If you want to unstage or discard the changes, click the arrow that shows up when you hover over the file name.
 6. After staging the changes, a new section will say staged changes with your file.
+
+![alt text](<staged changes.png>)
+
 7. Set a message such as "hello!"
 8. Click the ... near source control, and choose pull.
+
+![alt text](<source control.png>)
+
 9. Then, where it says "commit", click the arrow drop down button and click commit and push.
 10. If you ever make a mistake, the same ... near source control has an "undo last commit" option when you see "commit" in that drop down.
 11. Lastly, the bottom section on the left can be dragged upward to show what git pushes have happened.
@@ -142,5 +159,4 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 _**Troubleshooting Note: Sometimes there's an error that states that git username and email haven't been set up despite doing so earlier in the steps when you try to commit from VsCode.**_
 
 _Do ```git config --global -e``` in your terminal and it will open up a text editor that will allow you to change your username and email with the global option manually. Ctrl x, then y to leave and save that._
-## Exercises
-### Exercise 1:
+
