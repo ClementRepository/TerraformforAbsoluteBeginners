@@ -34,8 +34,8 @@ You will learn:
 - How to download git and sign up for a Github account
 - How to create a github repository
 - How to utilize git commands to commit files to Github from your terminal
-- How to start a pull request
-- How to download and use VsCode to commit files to Github
+- How to clone repositories to your computer 
+- How to download and use VsCode to commit and push files to Github
 
 # Prerequisite downloads/installs
 If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.

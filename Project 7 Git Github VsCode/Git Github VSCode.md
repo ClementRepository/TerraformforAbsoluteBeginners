@@ -5,7 +5,7 @@ Git is meant to handle projects of varying sizes and tracking changes in code. G
 _Note: VsCode isn't required to do the work, however, it is widely used because of its many tools and abilities packed in it._
 
 ## Objective
-You will be able to download Git, create and use a Github account, and download VsCode while pushing content from VsCode into a Github Repository.
+You will be able to download Git and commit your work, create and use a Github account, and download VsCode,clone your work to your computer, and push content from VsCode into a Github Repository.
 
 
 ## Links
