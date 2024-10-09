@@ -110,12 +110,7 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 1. Go to VsCode's download page [vscode download](https://code.visualstudio.com/download) and click Windows in blue to download.
 2. Open up Visual Studio Code when it's done.
 3. On the left, there is a logo with 5 squares, called extensions. Click on it.
-![alt text](<wsl vs.png>)
-
 4. When the search bar option is available, you need to search for "WSL" and "GitHub Pull Requests". Make sure both are installed.
-
-![alt text](<github pull requests.png>)
-
 5. After installing, on the bottom left of the vertical bar of the vscode window you should see a cog wheel and a person button. That should be the accounts button, where you click on it for a dropdown.  
 6. There should be an option that says "Sign in with Github to use Github Pull Requests". Click on that.
 7. It will open up your web browser, where you log in with your Github account. Once you log in, press continue if the information is correct.
