@@ -17,6 +17,10 @@ You will be able to download Git, create and use a Github account, and download 
 
 [git and github how they work together](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
 
+[learn vscode](https://www.youtube.com/watch?v=B-s71n0dHUk&list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6)
+
+[git with vscode](https://www.youtube.com/watch?v=i_23KUAEtUM&list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6&index=2)
+
 ## Vocabulary/Commands:
 ```git --version``` will tell you what version of git has been downloaded.
 
