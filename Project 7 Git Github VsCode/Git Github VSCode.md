@@ -21,6 +21,8 @@ You will be able to download Git and commit your work, create and use a Github a
 
 [git with vscode](https://www.youtube.com/watch?v=i_23KUAEtUM&list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6&index=2)
 
+[github exercise for pull requests](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+
 ## Vocabulary/Commands:
 
 ### Git Commands:
@@ -41,6 +43,8 @@ You will be able to download Git and commit your work, create and use a Github a
 ```git fetch origin``` takes commits, and files from a remote repository into your local repository.
 
 ```git checkout``` tells Git what branch or commit you want to apply changes to. (Step 16 of Git Set Up)
+
+```git reset --soft``` resets a commit back to staging on your local machine.
 
 ### Github Vocabulary
 
@@ -83,38 +87,47 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 
 17. Follow these next steps after you've done the Github set up section.
 18. To push changes from something you've worked on to github, you can do ```git push origin``` after you've done ```git commit -m```.
-19. If it gives you an error message, use ``` git push --set-upstream origin master``` or ```git push --set-upstream origin main```
+19. If it gives you an error message, use ```git push --set-upstream origin master``` or ```git push --set-upstream origin main```
 
 ![alt text](<git push example.jpg>)
 
 ## Github Set Up
 1. Go to [github](github.com) and click sign up.
 2. Sign up for an account.
-3. Find the "+" sign and it should have a drop down menu. Click and choose new repository.
+3. When you're on the homepage, find your account profile picture on the top right. In this example it's green and white.
+
+![alt text](Profile.jpg)
+
+4. Click on the profile and click "Settings" from the dropdown.
+5. There will be a section that says "SSH and GPG Keys" that you click found on the left. Click on "New SSH Key" to add one.
+
+![alt text](<github ssh key.jpg>)
+
+6. Find the "+" sign and it should have a drop down menu. Click and choose new repository.
 
 ![alt text](<Github Repository Creation.jpg>)
 
-4. Once you get there, name your repository, make it either public or private (Private for our purposes for now), and check the box for "add a readme file." Click "Create Repository."
+7. Once you get there, name your repository, make it either public or private (Private for our purposes for now), and check the box for "add a readme file." Click "Create Repository."
 
 ![alt text](<Github Repository Creation 2.jpg>)
 
-5. On the right, there are several buttons to note. Fork, which makes a copy of the entire repository for your own usage on Github, and Code, which we will use for our next step.
+8. On the right, there are several buttons to note. Fork, which makes a copy of the entire repository for your own usage on Github, and Code, which we will use for our next step.
 
 ![alt text](<test repository.jpg>)
 
-6. Click on the green "code" button, where it will have a drop down menu. Choose SSH, copy the box underneath it.
+9. Click on the green "code" button, where it will have a drop down menu. Choose SSH, copy the box underneath it.
 
 ![alt text](<Github ssh git clone.jpg>)
 
-7. Go back to your terminal and run the command ```git clone``` followed by the SSH section you copied.
+10. Go back to your terminal and run the command ```git clone``` followed by the SSH section you copied.
 
 ![alt text](<git clone terminal.jpg>)
 
-8. Check to see if the Github repository has been added into wherever you cloned it. In the example case, the Test repository is present.
+11. Check to see if the Github repository has been added into wherever you cloned it. In the example case, the Test repository is present.
 
 ![alt text](<ls test.jpg>)
 
-9. You can now be able to do the same with any repository to download files for your own usage. As for your own repository, see step 17 onwards from Git Set Up section above this Github section.
+12. You can now be able to do the same with any repository to download files for your own usage. As for your own repository, see step 17 onwards from Git Set Up section above this Github section.
 
 ## VsCode Set Up
 1. Go to VsCode's download page [vscode download](https://code.visualstudio.com/download) and click Windows in blue to download.
