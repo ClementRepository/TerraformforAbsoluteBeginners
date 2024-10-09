@@ -148,9 +148,6 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 
 7. Set a message such as "hello!"
 8. Click the ... near source control, and choose pull.
-
-![alt text](<source control.png>)
-
 9. Then, where it says "commit", click the arrow drop down button and click commit and push.
 10. If you ever make a mistake, the same ... near source control has an "undo last commit" option when you see "commit" in that drop down.
 11. Lastly, the bottom section on the left can be dragged upward to show what git pushes have happened.
