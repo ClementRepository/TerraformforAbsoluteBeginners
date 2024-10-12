@@ -26,6 +26,8 @@ Using the AWS console (control panel), you will be able to start your own Virtua
 - Availability Zone
 - Nginx
 
+
+
 ## Steps to Launch an EC2 Instance
 1. Login to your AWS account
 2. On your home page, go to the search bar on the top and search for "EC2" and click on it.
@@ -90,7 +92,9 @@ Nginx is a web server that can handle many different connections. From your term
 5. Go to your web browser and type in the IPv4 address of your EC2. It should display the same as step 4.
 6. To change the output from Nginx, you need to first find the appropriate file. ```cd /var/www/html``` to find the contents. 
 7. ```sudo nano index.nginx-debian.html``` and configure it yourself to say what you want it to say.
-8. Test it again by doing step 5 over, with after you've changed html file from Step 7.
+8. Test it again by doing step 5 over, with after you've changed html file from Step 7. See the picture below.
+
+![alt text](<Changed Nginx text .jpg>)
 
 ## Exercise:
 - Delete the instance. Launch another instance with permissions for allowing port 22, 80 and 443 in the security group. SSH into the instance. Create a bash script that will:
