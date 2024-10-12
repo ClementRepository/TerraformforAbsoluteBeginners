@@ -75,6 +75,7 @@ _Note: for practice, 0.0.0.0/0 is ok, but for security in actual work-related si
 9. If it looks like the picture above, then you are inside your EC2 instance! Nice job! Now you can install things in here and work with it.
 
 10. If you want to get out of the EC2 instance, type ```logout``` and enter. It will close your connection.
+11. If you want to delete the instance, go back to where you found the details of your instance, and there should be a "Instance State" that will drop down, with a "terminate instance" option.
 
 ## Nginx Website Fun
 
