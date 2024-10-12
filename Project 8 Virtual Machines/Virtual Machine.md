@@ -61,9 +61,9 @@ _Note: While "Anywhere" with the 0.0.0.0/0 CIDR Block is okay for just practice,
 
 ![alt text](<inbound rules1.jpg>)
 
-6. In the "Source" box, choose "My IP" from the drop down. 
+6. In the "Source" box, choose 0.0.0.0/0 (Which allows all traffic)
 
-_Note: for practice, 0.0.0.0/0 is ok, but for security, choose your own IP._
+_Note: for practice, 0.0.0.0/0 is ok, but for security in actual work-related situations, choose your own IP option in the drop down._
 
 7. Go back to your Ec2 dashboard, click "Instances", click your EC2 instance, and find the details tab. Copy the IPv4 address listed there.
 8. In your terminal, run the command ```ssh ubuntu@``` followed by the IPv4 address you copied from the details tab, then press enter. It will ask you if you want to allow it. Type yes and enter.
@@ -83,9 +83,22 @@ Nginx is a web server that can handle many different connections. From your term
 1. Make sure you are in your EC2 instance from the previous section.
 2. ```sudo apt install``` nginx.
 3. After the install is complete, you can start nginx by running ```sudo systemctl enable nginx```, then ```sudo systemctl start nginx```, and check if it's running using ```sudo systemctl status nginx```.
-4.
 
 ![alt text](<nginx status.jpg>)
 
+4. ```curl localhost``` in your terminal to see if you get an output from Nginx. It should say "Welcome to Nginx".
+5. Go to your web browser and type in the IPv4 address of your EC2. It should display the same as step 4.
+6. To change the output from Nginx, you need to first find the appropriate file. ```cd /var/www/html``` to find the contents. 
+7. ```sudo nano index.nginx-debian.html``` and configure it yourself to say what you want it to say.
+8. Test it again by doing step 5 over, with after you've changed html file from Step 7.
+
 ## Exercise:
-- Create a bash script that will install
+- Delete the instance. Launch another instance with permissions for allowing port 22, 80 and 443 in the security group. SSH into the instance. Create a bash script that will:
+- install nginx
+- enable nginx
+- start nginx
+- check nginx's status
+- stop nginx
+- remove nginx from your instance
+
+_Note: See nginx_install.sh_ afterwards to see an example.
