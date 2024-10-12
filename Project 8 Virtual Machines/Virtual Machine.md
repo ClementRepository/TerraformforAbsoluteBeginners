@@ -105,4 +105,4 @@ Nginx is a web server that can handle many different connections. From your term
 - stop nginx
 - remove nginx from your instance
 
-_Note: See nginx_install.sh_ afterwards to see an example.
+_Note: See nginx_install.sh afterwards to see an example of the bash script._
