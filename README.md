@@ -37,6 +37,14 @@ You will learn:
 - How to clone repositories to your computer 
 - How to download and use VsCode to commit and push files to Github
 
+## Project 8 Starting a Virtual Machine
+You will learn:
+- What a virtual machine is
+- What an Amazon EC2 Instance is
+- How to start up an Amazon EC2
+- How to navigate the EC2 Dashboard on the AWS console
+- How to install Nginx, get it to run, and check its status
+
 # Prerequisite downloads/installs
 If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.
 

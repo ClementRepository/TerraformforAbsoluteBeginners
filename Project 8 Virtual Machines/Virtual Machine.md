@@ -8,23 +8,33 @@ Using the AWS console (control panel), you will be able to start your own Virtua
 ## Links
 [Virtual Machines Explained in 15 minutes](https://www.youtube.com/watch?v=mQP0wqNT_DI)
 
+[Network Chuck IP Address video](https://www.youtube.com/watch?v=5WfiTHiU4x8&list=PLIhvC56v63IKrRHh3gvZZBAGvsvOhwrRF&index=1)
+
+[Powercert HTTP HTTPS](https://www.youtube.com/watch?v=hExRDVZHhig)
+
+[Powercert Ports](https://www.youtube.com/watch?v=g2fT-g9PX9o)
+
+[What is Amazon VPC](https://www.youtube.com/watch?v=WfCmi3vTVkY)
+
 [AWS EC2 Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 
+[AWS CIDR](https://aws.amazon.com/what-is/cidr/)
+
 ## Vocabulary/Commands
-- Virtual Machine
-- EC2 Instance
-- Cloud
-- web server
-- AMI
-- Port
-- Security Group
-- CIDR Block
-- IP Address (Public and Private)
-- VPC
-- encrypted
-- HTTPS vs HTTP
-- Availability Zone
-- Nginx
+- Virtual Machine: An emulation or virtualization of a computer where resources can be run as software.
+- EC2 Instance: Amazon's regular virtual machine
+- Cloud: a network of servers that store and deliver content through the internet.
+- web server: a computer system that stores and delivers content through the internet.
+- AMI: Amazon Machine Image for the EC2 instance (i.e. it has a distribution, such as Ubuntu, to run its EC2.)
+- Port: A meeting point that programs and services can exchange data. (An open port on your computer allows traffic in. For example, Port 443 being open allows https based websites to be accessible. Closing this would prevent you from browsing websites.)
+- Security Group: This controls the traffic to and from your EC2 instance. You can open and close ports for this purpose.
+- CIDR Block: An efficient way to distribute IP addresses, allowing more addresses to be used.
+- IP Address: Every computer or machine connected to the internet has an address in which it uses its address and others to communicate.
+- VPC: A virtual network that allows for creation of subnets.
+- Subnet: A division of a larger network that splits into smaller networks, which allows traffic to travel faster.
+- HTTPS vs HTTP: Hypertext transfer protocol, in which HTTPS is the "secure" version of the other to encrypt or protect your information on websites.
+- Availability Zone: When setting the AWS region, such as us-west-2, it will have multiple Availability zones that can serve as backups in case one region's instances fail.
+- Nginx: A web server that is known for using less resources and being stable for applications such as websites.
 
 
 
