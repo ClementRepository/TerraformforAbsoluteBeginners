@@ -12,3 +12,5 @@ sudo apt update
 sudo apt-get install terraform
 
 terraform --version
+
+## See vocabulary for particular commands

@@ -127,7 +127,7 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 
 ![alt text](<ls test.jpg>)
 
-12. You can now be able to do the same with any repository to download files for your own usage. As for your own repository, see step 17 onwards from Git Set Up section above this Github section.
+12. You can now be able to do the same with any repository to download files for your own usage. (It is recommended to git clone the repository that these projects are from.) As for your own repository, see step 17 onwards from Git Set Up section above this Github section.
 
 ## VsCode Set Up
 1. Go to VsCode's download page [vscode download](https://code.visualstudio.com/download) and click Windows in blue to download.

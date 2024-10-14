@@ -1,9 +1,11 @@
-# Learn Terraform Basics
+# Install and Set up AWS CLI and Terraform
 ## What is this?
 Terraform is an example of "Infrastructure as Code" software that allows users to set a blueprint for their work and be re-configured across different sources to be re-used. (Basically, allowing you to set up everything once and not need to create everything manually again.)
 
+The AWS CLI is Amazon's application that allows the user to configure and manage their AWS resources within their own local terminal.
+
 ## Objective
-You will be able to install and configure both AWS CLI and Terraform. You will learn relevant Terraform commands to initialize and create an EC2 instance from your command line. In addition, you will be able to understand how to maniupulate and alter the configuration file for Terraform.
+You will be able to install and configure both AWS CLI and Terraform. 
 
 ## Links
 [What is Terraform](https://developer.hashicorp.com/terraform/intro)
@@ -14,7 +16,7 @@ You will be able to install and configure both AWS CLI and Terraform. You will l
 
 [Terraform Explained in 15 minutes](https://www.youtube.com/watch?v=l5k1ai_GBDE)
 
-## Vocabulary and Commands
+## Vocabulary 
 HCL: Hashicorp Configuration Language. This language is used by Terraform and is considered human readable and can deploy cloud resources when configured.
 
 IaC: Infrastructure as Code which allows users to set up their work environment without needing to change everything over and over. This vastly speeds up the process by re-using the same configuration.
@@ -25,9 +27,19 @@ Root User: The original owner of the account/computer. You should not allow root
 
 IAM User: A separate account identity that allows someone access to AWS resources.
 
+GPG Key: A tool that uses public keys to verify a file's origin or authenticity. (Used within the bash script example, as the ```gpg``` command.)
+
+## Commands
+
 ```aws configure```: Allows someone to configure a user in the terminal for usage of AWS resources.
 
 ```aws sts get-caller-identity```: shows you your AWS identity after you've configured the CLI. See the section on CLI Configuration and Set Up.
+
+```curl```: requests data and transfers it using URL/web addresses.
+
+```wget```: retrieves data from the internet and downloads accordingly.
+
+```|```: called a pipe, takes the standard output of one process and passes it as standard input into another process. For example, ```ls | grep read.txt``` means it lists everything, and then finds the file ```read.txt```. The structure of this is usually command1 | command2.
 
 ```terraform init```: Starts up your terraform project.
 
@@ -80,4 +92,7 @@ OR
 run the command ```aws sts get-caller-identity``` (You will see if the ARN includes the user at the end of the line)
 
 ## Terraform Install and Set Up
-
+1. You can either copy and paste the code from Install_Terraform.sh and create your own bash script, or if you already have ```git clone git@github.com:Clemchowdah/TerraformforAbsoluteBeginners.git```, you already have this file in your local computer.
+2. ```chmod +x Install_Terraform.sh```
+3. ```./Install_Terraform.sh```
+4. ```terraform --version```
