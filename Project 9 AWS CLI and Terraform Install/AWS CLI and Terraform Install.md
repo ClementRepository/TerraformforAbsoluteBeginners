@@ -17,7 +17,7 @@ You will be able to install and configure both AWS CLI and Terraform.
 [Terraform Explained in 15 minutes](https://www.youtube.com/watch?v=l5k1ai_GBDE)
 
 ## Vocabulary 
-HCL: Hashicorp Configuration Language. This language is used by Terraform and is considered human readable and can deploy cloud resources when configured.
+HCL: Hashicorp Configuration Language. This language is used by Terraform and is considered human readable and can deploy cloud resources when configured. Hashicorp is the company behind Terraform.
 
 IaC: Infrastructure as Code which allows users to set up their work environment without needing to change everything over and over. This vastly speeds up the process by re-using the same configuration.
 
@@ -40,18 +40,6 @@ GPG Key: A tool that uses public keys to verify a file's origin or authenticity.
 ```wget```: retrieves data from the internet and downloads accordingly.
 
 ```|```: called a pipe, takes the standard output of one process and passes it as standard input into another process. For example, ```ls | grep read.txt``` means it lists everything, and then finds the file ```read.txt```. The structure of this is usually command1 | command2.
-
-```terraform init```: Starts up your terraform project.
-
-```terraform plan```: Shows you what your terraform resources are, within your configuration file.
-
-```terraform fmt```: Fixes formatting or syntax issues.
-
-```terraform apply```: Applies the terraform resources in your configuration files.
-
-```terraform show```: Shows what resources are present and applied.
-
-```terraform destroy```: Deletes and destroys anything that terraform applied earlier.
 
 ## AWS CLI Install
 1. Open up your terminal and go to your home directory. ```cd ~```

@@ -1,45 +1,18 @@
-# Install and Set up AWS CLI and Terraform
+# How to create an EC2 Instance Using Terraform
 ## What is this?
-Terraform is an example of "Infrastructure as Code" software that allows users to set a blueprint for their work and be re-configured across different sources to be re-used. (Basically, allowing you to set up everything once and not need to create everything manually again.)
+Terraform can be used to create instances using its different aspects of code. Learning about these different parts will benefit anyone who seeks to learn the intricacies of Infrastructure as Code.
 
-The AWS CLI is Amazon's application that allows the user to configure and manage their AWS resources within their own local terminal.
+The tutorial will be grouped into sections for each part of the terraform files. It is recommended to use VSCode to keep the syntax neat and formatted.
 
 ## Objective
-You will be able to install and configure both AWS CLI and Terraform. 
+You will be able to break down Terraform files in their respective parts and create an EC2 instance from your local terminal.
 
 ## Links
-[What is Terraform](https://developer.hashicorp.com/terraform/intro)
-
-[Spacelift Terraform Explanation](https://spacelift.io/blog/what-is-terraform)
-
-[Infrastructure as Code](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code)
-
-[Terraform Explained in 15 minutes](https://www.youtube.com/watch?v=l5k1ai_GBDE)
+_Note: Links for Terraform documentation will be included in their appropriate tutorial sections below, rather than in this section._
 
 ## Vocabulary 
-HCL: Hashicorp Configuration Language. This language is used by Terraform and is considered human readable and can deploy cloud resources when configured.
-
-IaC: Infrastructure as Code which allows users to set up their work environment without needing to change everything over and over. This vastly speeds up the process by re-using the same configuration.
-
-AWS CLI: Amazon's Command Line Interface that will allow a user to change files and set up a connection to the AWS console.
-
-Root User: The original owner of the account/computer. You should not allow root access to others on your accounts.
-
-IAM User: A separate account identity that allows someone access to AWS resources.
-
-GPG Key: A tool that uses public keys to verify a file's origin or authenticity. (Used within the bash script example, as the ```gpg``` command.)
 
 ## Commands
-
-```aws configure```: Allows someone to configure a user in the terminal for usage of AWS resources.
-
-```aws sts get-caller-identity```: shows you your AWS identity after you've configured the CLI. See the section on CLI Configuration and Set Up.
-
-```curl```: requests data and transfers it using URL/web addresses.
-
-```wget```: retrieves data from the internet and downloads accordingly.
-
-```|```: called a pipe, takes the standard output of one process and passes it as standard input into another process. For example, ```ls | grep read.txt``` means it lists everything, and then finds the file ```read.txt```. The structure of this is usually command1 | command2.
 
 ```terraform init```: Starts up your terraform project.
 
@@ -53,46 +26,64 @@ GPG Key: A tool that uses public keys to verify a file's origin or authenticity.
 
 ```terraform destroy```: Deletes and destroys anything that terraform applied earlier.
 
-## AWS CLI Install
-1. Open up your terminal and go to your home directory. ```cd ~```
+## 1. Providers.tf File
+The providers section and subsequent providers.tf file tells Terraform what application to communicate with. In our case, it will be AWS. You can also access the link for the AWS Provider Documentation here.
 
-2. ```curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"```
+[AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
-3. ```sudo apt install unzip```
+![alt text](<providers terraform file.jpg>)
 
-4. ```unzip awscliv2.zip```
+On line 1-3, Terraform asks for the required provider. As we mentioned before, it would be AWS. 
+On line 4, we put the source as hashicorp/aws. This is also referenced in the Provider Documentation example. Please take a look.
 
-5. ```sudo ./aws/install``` (It will tell you that you can run ```/usr/local/bin/aws```)
+_Notice on lines 1, 2, and 3, there are brackets open to the right, and then enclosed by square brackets in line 5, 6, and 7. It is very important to close them, as leaving them open will give an error output later. Likewise, quotation marks are needed for any content, including those within brackets._
 
-6. ```aws --version``` and it will show you what version of the AWS CLI is installed. See below for the example output.
+On line 9, we get to the provider details section. "aws" is the listed provider since we are using AWS with Terraform.
+In Line 10, this is the region. If you remember from your AWS console, you chose a region to start. When you go to your AWS Dashboard, next to your name on the top right, there should be a region listed, with its appropriate region code in the drop down. In the picture, us-east-2 refers to Ohio.
+For Line 11, a shared_credentials_file is asking where your AWS credentials are stored within your local computer. In this example, it's inside the .aws directory under the credentials file. (This particular section needs square brackets since it is showing the path to the file.)
+The profile part of this is asking what profile is going to access AWS. Run ```aws sts get-caller-identity``` to check which profile you are on. The example states that the profile is "user."
+Lastly, the final bracket on line 13 closes off what line 9 started.
 
-![alt text](<aws version after cli install.jpg>)
+### Steps for Providers.tf File
+1. Create a working directory for your Terraform configuration. For example, ```mkdir EC2Terraform```
+2. Swap over to that directory. ```cd EC2Terraform```
+3. Create a providers.tf file, and ```nano providers.tf```
+3. Copy paste the formatting from the example and change appropriate information.
+4. Save the file in that directory.
 
-## AWS CLI Configuration and Set Up
-1. Login to your AWS Dashboard on your browser.
-2. Search for IAM in the search bar and click on the first result to go to the IAM dashboard.
-3. From there, find "Users" on the left and click that.
-4. Click "Create Users".
-5. Create your user for IAM and password. (Check the box that provides user access to the Console so you can see it from the IAM view.)
-6. You can add policies or permissions to the IAM user if you'd like. Go back to "Users".
-7. Click on the newly created user under "user name".
-8. Find the button that says "Create Access Key".
-9. Choose "Command Line Interface" as the use case, click next. (What you're using it for)
-10. Choose a tag and then create the key.
-11. You will be able to view the Access Key and Secret Access Key. _**Make sure you copy them down somewhere, like a text document, for the next step. You will not be able to see the Secret Access Key again.**_
-12. Go to your terminal and run the command ```aws configure```. It will ask you for the Access Key, Secret Access Key, Default Region, and Default output format. (You can leave the output format blank, but you can put the region as whatever region you use in AWS.)  
-[AWS Configure Steps](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html)
+## 2. Datasources.tf File
+The data sources file in our example shows what kind of distribution we want for our EC2 instance. You can take a look at the documentation for data sources below.
 
-## How to check your AWS CLI Credentials in your Terminal
-1. ```cd .aws```
-2. ```sudo nano credentials``` (You will see your access key and secret access key)
+[data sources Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami)
 
-OR
+![alt text](<data sources terraform file.jpg>)
 
-run the command ```aws sts get-caller-identity``` (You will see if the ARN includes the user at the end of the line)
+In line 1, the data section goes over where the ami (Amazon Machine Image) comes from, and that it is designated as a server.
+Line 2 tells us that the ami would be the most recent or updated version; hence the label equaling true. If it wasn't the most recent it would be noted as false.
+Line 3 shows the owner of the AMI. To find the owner of an AMI, you need to go to launch instances within your EC2 Dashboard in the AWS console. It will show you the AMI ID once you have Ubuntu selected, as shown below.
 
-## Terraform Install and Set Up
-1. You can either copy and paste the code from Install_Terraform.sh and create your own bash script, or if you already have ```git clone git@github.com:Clemchowdah/TerraformforAbsoluteBeginners.git```, you already have this file in your local computer.
-2. ```chmod +x Install_Terraform.sh```
-3. ```./Install_Terraform.sh```
-4. ```terraform --version```
+![alt text](AMI.jpg)
+
+Once you have the AMI ID copied, click "AMI" on the left toolbar. It will take you to the AMI search function. Make sure the drop down is set at "Public Images", then paste the AMI ID you have into the search bar. From there, the Owner number will be visible.
+
+As shown in the example for owners, you'll find the owner ID to input in your datasources.tf file.
+
+![alt text](<AMI example.jpg>)
+
+Under line 5 onwards, the filter section can specifically identify the version of the Ubuntu. Within the picture you see above, there's a section called AMI name that you can click to find the "values" part of line 7. 
+
+### Steps for Datasources.tf file
+1. Within your working directory where you have your providers.tf file, ```touch datasources.tf```.
+2. ```nano datasources.tf```
+3. Copy paste the formatting of the example datasources.tf found within this project folder.
+4. Go to your AWS Console and click Launch Instance after choosing Instance.
+5. Copy the AMI ID after selecting Ubuntu.
+6. Paste the AMI ID into the AMI search bar after going back and clicking AMI on the left toolbar. Don't forget to have public images set as a filter.
+7. Copy the owner number and paste it into the owners section of your datasources.tf file.
+8. Click on the AMI again to find the details. Copy the AMI Name information, but replace the numbers after the last dash with a * instead. This will allow the newest updated version of this AMI to be used, as you see in the example from before.
+
+![alt text](<AMI Name.jpg>)
+
+9. Save your datasources.tf file.
+
+
