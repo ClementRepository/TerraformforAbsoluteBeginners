@@ -21,6 +21,12 @@ IaC: Infrastructure as Code which allows users to set up their work environment 
 
 AWS CLI: Amazon's Command Line Interface that will allow a user to change files and set up a connection to the AWS console.
 
+Root User: The original owner of the account/computer. You should not allow root access to others on your accounts.
+
+IAM User: A separate account identity that allows someone access to AWS resources.
+
+```aws configure```: Allows someone to configure a user in the terminal for usage of AWS resources.
+
 ```aws sts get-caller-identity```: shows you your AWS identity after you've configured the CLI. See the section on CLI Configuration and Set Up.
 
 ```terraform init```: Starts up your terraform project.
