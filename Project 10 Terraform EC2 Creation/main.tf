@@ -129,4 +129,4 @@ resource "aws_instance" "main_node" {
 #6 terraform show
 #7 ansible-playbook -i hosts.yaml install_nginx.yaml
 
-#
+# You can ignore 7 here, as it is in reference to another program called Ansible that this section does not go over.
