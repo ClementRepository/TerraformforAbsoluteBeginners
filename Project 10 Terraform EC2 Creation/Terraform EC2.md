@@ -21,6 +21,8 @@ _Vocabulary will be discussed within their corresponding sections of Terraform a
 
 ```terraform fmt```: Fixes formatting or syntax issues.
 
+```terraform validate```: verifies if a configuration file is consistent and the values that were input are considered correct.
+
 ```terraform apply```: Applies the terraform resources in your configuration files.
 
 ```terraform show```: Shows what resources are present and applied.
