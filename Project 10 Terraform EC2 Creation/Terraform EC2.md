@@ -26,6 +26,13 @@ _Note: Links for Terraform documentation will be included in their appropriate t
 
 ```terraform destroy```: Deletes and destroys anything that terraform applied earlier.
 
+# Prior Set Up
+_**Note: Only if you didn't clone the repository already in Project 7. You should still do step 4 of this section to see the appropriate Terraform files.**_
+1. Go to [TerraformForAbsoluteBeginners Github](https://github.com/Clemchowdah/TerraformforAbsoluteBeginners) and press the fork button.
+2. In Vscode, open a new window and click "Clone Git Repository". In the dropdown, click "Clone from Github".
+3. Choose the correct repository to clone. You'll need to right click when it asks a folder to clone into, and press "new", and rename the folder. Select that folder as the repository destination.
+4. In the explorer bar on the left in VsCode, click into Project 10 Terraform EC2 Creation to access the appropriate terraform files.
+
 ## 1. Providers.tf File
 The providers section and subsequent providers.tf file tells Terraform what application to communicate with. In our case, it will be AWS. You can also access the link for the AWS Provider Documentation here.
 

@@ -5,7 +5,7 @@ Git is meant to handle projects of varying sizes and tracking changes in code. G
 _Note: VsCode isn't required to do the work, however, it is widely used because of its many tools and abilities packed in it._
 
 ## Objective
-You will be able to download Git and commit your work, create and use a Github account, and download VsCode, clone your work to your computer, and push content from VsCode into a Github Repository.
+You will be able to download Git and commit your work, create and use a Github account, download VsCode, clone your work to your computer, and push content from VsCode into a Github Repository. In addition, you will clone the TerraformForAbsoluteBeginners repository for your own practice.
 
 
 ## Links
@@ -46,6 +46,8 @@ You will be able to download Git and commit your work, create and use a Github a
 
 ```git reset --soft``` resets a commit back to staging on your local machine.
 
+```git clone``` makes a copy of the repository onto your own computer.
+
 ### Github Vocabulary
 
 Pull Request: When pushing changes to a repository that isn't yours, it will become a pull request. The owner of that repository can accept or deny the pull request to update the file in question.
@@ -53,6 +55,8 @@ Pull Request: When pushing changes to a repository that isn't yours, it will bec
 Repository/Repo: A storage area for code and files of a project.
 
 Readme: Repositories usually have a readme file that explains what the project or repository is for.
+
+Fork: Making a fork from a repository means you make a copy of that repository for your own testing purposes, within Github. You can then do the git clone function to get it on your own computer.
 
 ### VsCode Vocabulary
 
@@ -139,7 +143,7 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 7. It will open up your web browser, where you log in with your Github account. Once you log in, press continue if the information is correct.
 8. Then click Authorize Visual Studio Code.
 9. After that, go to VsCode again. If need be, click file on the top left and click new window. It will bring you to a welcome page.
-10. Click "Clone Git Repository." It'll have a dropdown on the top search bar asking you to clone from Github. Click that as well.
+10. Click "Clone Git Repository." It'll have a dropdown on the top search bar asking you to clone the repository from Github. Click that as well.
 
 ![alt text](<vscode new window.png>)
 
@@ -151,6 +155,14 @@ _Note: For anything that is meant to be presented or deployed, that's the master
 ![alt text](<vscode terminal.jpg>)
 
 15. After that, you will see that the terminal is open to the folder that you cloned the repository to.
+
+## Git Cloning TerraformForAbsoluteBeginners
+To clone the repository that all these files reside, follow these instructions.
+Prior to changing the contents of these files (assuming your Github account is now linked to VSCode):
+1. Go to [TerraformForAbsoluteBeginners Github](https://github.com/Clemchowdah/TerraformforAbsoluteBeginners) and press the fork button.
+2. In Vscode, open a new window and click "Clone Git Repository". In the dropdown, click "Clone from Github".
+3. Choose the correct repository to clone. You'll need to right click when it asks a folder to clone into, and press "new", and rename the folder. Select that folder as the repository destination. (It is probably best to keep the folder name as TerraformForAbsoluteBeginners to make it easier to remember.)
+
 
 ## VsCode Push files to Github Example:
 ### Goal: You will be able to commit and push a file to your repository.
