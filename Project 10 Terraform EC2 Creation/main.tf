@@ -121,12 +121,12 @@ resource "aws_instance" "main_node" {
   }
 }
 
+#Terraform commands below:
+
 #1 Terraform init
 #2 terraform fmt
 #3 terraform validate
 #4 terraform plan
 #5 terraform apply
 #6 terraform show
-#7 ansible-playbook -i hosts.yaml install_nginx.yaml
-
-# You can ignore 7 here, as it is in reference to another program called Ansible that this section does not go over.
+#7 terraform destroy
