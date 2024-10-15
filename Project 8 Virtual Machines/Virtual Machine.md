@@ -20,6 +20,8 @@ Using the AWS console (control panel), you will be able to start your own Virtua
 
 [AWS CIDR](https://aws.amazon.com/what-is/cidr/)
 
+[VPC in one minute](https://www.youtube.com/watch?v=hS_uvz4ohbo)
+
 ## Vocabulary/Commands
 - Virtual Machine: An emulation or virtualization of a computer where resources can be run as software.
 - EC2 Instance: Amazon's regular virtual machine
@@ -30,7 +32,7 @@ Using the AWS console (control panel), you will be able to start your own Virtua
 - Security Group: This controls the traffic to and from your EC2 instance. You can open and close ports for this purpose.
 - CIDR Block: An efficient way to distribute IP addresses, allowing more addresses to be used.
 - IP Address: Every computer or machine connected to the internet has an address in which it uses its address and others to communicate.
-- VPC: A virtual network that allows for creation of subnets.
+- VPC: A virtual network that allows for creation of subnets, encased within a public cloud.
 - Subnet: A division of a larger network that splits into smaller networks, which allows traffic to travel faster.
 - HTTPS vs HTTP: Hypertext transfer protocol, in which HTTPS is the "secure" version of the other to encrypt or protect your information on websites.
 - Availability Zone: When setting the AWS region, such as us-west-2, it will have multiple Availability zones that can serve as backups in case one region's instances fail.

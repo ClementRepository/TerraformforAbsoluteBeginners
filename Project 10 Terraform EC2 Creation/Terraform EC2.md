@@ -86,4 +86,23 @@ Under line 5 onwards, the filter section can specifically identify the version o
 
 9. Save your datasources.tf file.
 
+## 3. Main.tf File
+The main.tf file carries the bulk of the terraform resources. Some people prefer to split up their resources into separate .tf files to make it easier to locate information. For the sake of this tutorial, the main.tf file will hold different resources, and this section will go over each part.
 
+### VPC
+
+![alt text](<vpc terraform section .jpg>)
+
+[VPC AWS documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)
+
+This time, in line 1, the first quotation of "aws_vpc" cannot be changed. The second set of quotations is the name of your VPC. 
+The CIDR block is up to you for line 2, but the one listed in the example is in the documentation as well.
+In Line 3, "default" is the default setting that makes all EC2 instances in this VPC
+The tags in line 5 and 6 tell you what subgroup this is a part of. Don't forget to enclose all brackets.
+
+#### VPC Steps
+1. Navigate to the directory you are doing your terraform work in.
+2. ```touch main.tf```
+3. Copy the contents of main.tf from the repository to your own main.tf file.
+4. Change the name in line 1 "main" into whatever you'd like.
+5. Add a tag name in line 6.

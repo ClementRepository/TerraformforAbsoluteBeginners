@@ -80,7 +80,7 @@ OR
 run the command ```aws sts get-caller-identity``` (You will see if the ARN includes the user at the end of the line)
 
 ## Terraform Install and Set Up
-1. You can either copy and paste the code from Install_Terraform.sh and create your own bash script, or if you already have ```git clone git@github.com:Clemchowdah/TerraformforAbsoluteBeginners.git```, you already have this file in your local computer.
+1. You can either copy and paste the code from Install_Terraform.sh and create your own bash script, or if you already have put the repository into a local folder: ```git clone git@github.com:Clemchowdah/TerraformforAbsoluteBeginners.git```, you already have this file in your local computer.
 2. ```chmod +x Install_Terraform.sh```
 3. ```./Install_Terraform.sh```
 4. ```terraform --version```
