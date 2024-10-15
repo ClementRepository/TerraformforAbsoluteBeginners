@@ -45,12 +45,18 @@ You will learn:
 - How to navigate the EC2 Dashboard on the AWS console
 - How to install Nginx, get it to run, and check its status
 
-## Project 9: Learning to Use Terraform Basics
+## Project 9: Installing AWS CLI and Terraform
 You will learn:
 - What Terraform is
 - How to install the AWS Command Line Interface
 - Create an IAM user in your AWS Console/Dashboard
--
+- How to configure the IAM user within your VSCode terminal
+
+## Project 10: Terraform EC2 Creation
+You will learn:
+- About the resources within various Terraform files that are necessary for creating an AWS EC2 instance
+- How to reference information from different Terraform files
+- Master the commands necessary to initialize the EC2 instance, as well as deleting it
 
 # Prerequisite downloads/installs
 If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.
