@@ -1,4 +1,4 @@
-# Creating an EKS Cluster Using Terraform
+# Setting up Kubernetes
 ## What is this?
 Kubernetes is a platform that can deploy applications and automate changes. Docker, on the other hand, is a software platform that allows developers to build, test, and deploy applications quickly by packaging them into containers.
 
