@@ -20,3 +20,4 @@ Using Terraform, you will learn how to operate with an EKS cluster and use tools
 
 
 ## Steps
+_VPCs must have two subnets that are in different availability zones._
