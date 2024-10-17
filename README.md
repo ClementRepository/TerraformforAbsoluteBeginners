@@ -58,6 +58,16 @@ You will learn:
 - How to reference information from different Terraform files
 - Master the commands necessary to initialize the EC2 instance, as well as deleting it
 
+## Project 11: Kubernetes and Docker Install
+You will learn:
+- How to install and set up Kubernetes and Docker
+
+## Project 12: Kubernetes EKS Cluster Set Up
+You will learn:
+- How to utilize Terraform to create an EKS Cluster
+- How to use different Kubernetes commands to configure and monitor containers and pods
+- About the different YAML files that Kubernetes can use to manage resources
+
 # Prerequisite downloads/installs
 If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.
 
