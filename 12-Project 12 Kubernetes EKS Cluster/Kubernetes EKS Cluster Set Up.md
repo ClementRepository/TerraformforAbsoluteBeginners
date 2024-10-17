@@ -12,28 +12,37 @@ Using Terraform, you will learn how to start up and interact with an EKS cluster
 ## Links
 [Anton Putra AWS EKS Tutorial Playlist](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
 
+[Kubectl Commands](https://kubernetes.io/docs/reference/kubectl/)
+
+[IAM roles AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+
+[Kubernetes Cluster AWS](https://aws.amazon.com/what-is/kubernetes-cluster/)
+
+[Anton Putra Kubernetes Basics](https://www.youtube.com/watch?v=B_X4l4HSgtc)
+
+[TechwithNana Pods and Containers](https://www.youtube.com/watch?v=5cNrTU6o3Fw)
 
 ## Vocabulary
 
-Policy
+Policy:  defines the permissions granted to resources within AWS.
 
-Endpoint
+Endpoint: A device that connects to a network and exchanges information with other devices.
 
 IAM Role: Can be taken on by anyone who has this role, as opposed to an IAM user where it's just one person.
 
-Node Group
+Node Group: a collection of nodes/instances that share the same configuration and run containers concurrently.
 
-YAML file
+YAML file: A common file type that generally creates configuration files, meant to encourage ease of use for human reading.
 
 RBAC: Role based Access Control-this manages user access to systems and protects sensitive data.
 
-Deployment
+Deployment: A Kubernetes tool that manages a set of pods to run applications smoothly.
 
-Pod
+Pod: The smallest possible computing resource, in this case, meant to be managed by Kubernetes, meant to run applications.
 
-Service
+Service: Defines a set of pods and sets configuration and mapping of network traffic between pods.
 
-Namespace
+Namespace: isolates groups of resources within a cluster.
 
 DNS-Domain Name System, names used on the internet get resolved to an IP address (For example www.namewhateveryouwant.com will show an IP address.)
 
@@ -43,13 +52,32 @@ Elastic IP: EIP, which holds an IP address until released (for example, by termi
 
 VPC CNI: A plugin for Kubernetes to use that allows for EC2 nodes within a cluster to have things such as public IP addresses, and attaches a private IP address as well.
 
-Amazon ECR:
+Amazon ECR: Docker container registry that is meant to store and share images.
 
-Cluster Autoscaler:
+Cluster Autoscaler: Adjusts the number of nodes in the cluster if pods somehow fail.
 
 ## Commands
 
-kubectl 
+```kubectl version```: checks version of kubectl
+
+```kubectl get svc```: checks status of Kubernetes services within the cluster
+
+```kubectl get nodes -A -o wide```: Shows what nodes are present on the cluster
+
+```kubectl get pods -A -o wide```: Shows what pods are present on the cluster
+
+```kubectl get deployments -A -o wide```: Shows present deployments on the cluster
+
+```kubectl get namespaces -A -o wide```: Shows present namespaces on a cluster
+
+```aws eks update-kubeconfig --region us-east-2 --name {name of cluster}```: Sets up Kubernetes configuration of the cluster and region with AWS EKS. (change the region, and add the name of the cluster without curly brackets.)
+
+```kubectl describe pods -A```: Shows more detailed version of pods (you can change pods to nodes, deployments, etc.)
+
+```kubectl apply -f {name of yaml file}```: applies the functions listed within the yaml file (again, add in the name of the yaml file without curly brackets.)
+
+```kubectl exec --stdin --tty {podname} -- /bin/bash```: Allows you to open up the terminal within a pod so that you can run commands in there. (Make sure you replace the brackets and podname with just the name of the pod.)
+
 
 ## Explanation of Terraform Files
 _VPCs must have two subnets that are in different availability zones(minimum 2 zones). Hence, the subnet (5) file has 2 public and 2 private subnets to work._
@@ -139,9 +167,41 @@ Now that the cluster is up and running, now is the time to use various Kubernete
 
 ![alt text](<kubectl get pods -A -o wide.png>)
 
-Note that the pods shown here are in the name space of kube-system. If you were to do anything else in changing items, it would go within the "default" name space instead. CoreDNS and Kube proxy are automatic, and the aws-node listed here was our t3.medium from before in the nodes.tf file.
+Note that the pods shown here are in the namespace of kube-system. If you were to do anything else in changing items, it would go within the "default" name space instead. CoreDNS and Kube proxy are automatic, and the aws-node listed here was our t3.medium from before in the nodes.tf file.
 
 6. You can run ```kubectl describe pods``` or any other thing such as nodes, to display detailed information about that resource.
 
-## Steps to deploy Nginx or Start a Pod
+## Steps to deploy Nginx
+There are different ways to have Kubernetes start Nginx. Starting a pod is the smallest computer resource to deploy Nginx. A pod is the tiniest group of containers (one or more containers.)
 
+A service, on the other hand, is a file that can group pods into a single resource and give them an IP address of their own. Services have stable port usage and IP addresses. They route traffic to the pods as an internal load balancer. It also can enable communication between pods and can access various pods' abilities.
+
+Deployments manage pods, giving information about them, such as what AMI/image they use, what resources they use, among other things. It has a supportive role that can maintain updates and perform upkeep on pods.
+
+### Pod
+For the first example, nginx-pod.yml, It specifies "kind" as pod. Kind can be designated as a pod, service, deployment, and so forth. It specifies the pod name, what image it uses, and what port is open for it to function.
+
+![alt text](<nginx pod example.jpg>)
+
+1. ```kubectl apply -f nginx-pod.yaml```
+2. Check the status of the pod by running ```kubectl get pods -A -o wide``` to verify that it is running.
+3. You can even SSH into it by running ```kubectl exec --stdin --tty {podname} -- /bin/bash``` (Make sure you replace the brackets and podname with just the name of the pod for it to work.). ```exit``` to leave.
+
+### Service
+
+For the nginx service, it generally has similar syntax.
+
+1. ```kubectl apply -f nginx-service.yaml```
+2. Check the status with ```kubectl get svc -A -o wide```.
+
+![alt text](<nginx service example.jpg>)
+
+### Deployment
+
+For nginx deployment, the biggest difference would be that there is a section for replicas. It would make 3 copies of nginx infused pods.
+
+1. ```kubectl apply -f nginx-deployment.yaml``` (You can also add 2 more replicas by ```kubectl scale -f nginx-deployment.yaml --replicas=2```.)
+2. Check the status by doing ```kubectl get deployments -A -o wide```.
+3. Delete the deployment by using ```kubectl delete deployment {deploymentname} -n {namespace}```. Remember to fill in the deployment name and namespace without the brackets for this to work.
+
+![alt text](<nginx deployment example.jpg>)

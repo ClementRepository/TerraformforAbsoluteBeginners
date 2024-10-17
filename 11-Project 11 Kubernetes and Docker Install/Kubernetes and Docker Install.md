@@ -12,6 +12,9 @@ Using Terraform, you will learn how to install both Docker and Kubernetes to beg
 [Anton Putra AWS EKS Tutorial](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
 
 [What is Docker?](https://www.geeksforgeeks.org/introduction-to-docker/)
+
+[NetworkChuck Docker](https://www.youtube.com/watch?v=eGz9DS-aIeY&t=255s)
+
 ## Vocabulary
 
 cluster: Group of servers or resources that act together and share the load.
