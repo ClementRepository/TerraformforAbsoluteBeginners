@@ -5,8 +5,7 @@ Kubernetes is a platform that can deploy applications and automate changes. Dock
 For the goal of this project, we will cover installation of both Kubernetes and Docker, and cover how to use Docker in another project folder.
 
 ## Objective
-Using Terraform, you will learn how to operate with an EKS cluster and use tools within Kubernetes to manage said cluster.
-
+Using Terraform, you will learn how to install both Docker and Kubernetes to begin operating with a node cluster in the next project. 
 
 
 ## Links
@@ -15,8 +14,21 @@ Using Terraform, you will learn how to operate with an EKS cluster and use tools
 [What is Docker?](https://www.geeksforgeeks.org/introduction-to-docker/)
 ## Vocabulary
 
+cluster: Group of servers or resources that act together and share the load.
+
+container: Software in a contained/isolated environment meant to run programs faster.
+
+EKS: Elastic Kubernetes Service, the AWS feature for utilizing Kubernetes
+
 ## Commands
 
+```kubectl```: The command line interface for Kubernetes
+
+```eksctl```: Command line interface for EKS
+
+```newgrp```: Adds a group for Docker
+
+```usermod```: changes account details
 
 ## Docker Set Up
 In order to use Kubernetes, you'll need Docker installed on your local computer. The files in this folder will set up both the Docker app, as well as Docker-Compose. 
