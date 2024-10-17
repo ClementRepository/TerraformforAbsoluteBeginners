@@ -3,11 +3,9 @@
 ## What is this?
 Kubernetes is a platform that can deploy applications and automate changes. Docker, on the other hand, is a software platform that allows developers to build, test, and deploy applications quickly by packaging them into containers.
 
-For the goal of this project, we will cover installation of EKS and its application
 
 ## Objective
-Using Terraform, you will learn how to start up and interact with an EKS cluster and Kubernetes commands to run nginx on a pod, check contents of pods, and use various files.
-
+Using Terraform, you will learn how to start up and interact with an EKS cluster and its associated nodes. In addition, you will be able to use YAML files and Kubernetes commands to configure Kubernetes resources.
 
 ## Links
 [Anton Putra AWS EKS Tutorial Playlist](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
