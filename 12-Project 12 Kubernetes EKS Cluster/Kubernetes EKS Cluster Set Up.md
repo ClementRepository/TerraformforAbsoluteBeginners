@@ -13,7 +13,7 @@ Using Terraform, you will learn how to operate with an EKS cluster and use tools
 ## Links
 [Anton Putra AWS EKS Tutorial](https://www.youtube.com/playlist?list=PLiMWaCMwGJXnKY6XmeifEpjIfkWRo9v2l)
 
-[What is Docker?](https://www.geeksforgeeks.org/introduction-to-docker/)
+
 ## Vocabulary
 
 ## Commands
