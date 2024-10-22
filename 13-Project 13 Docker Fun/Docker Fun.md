@@ -1,0 +1,109 @@
+# Docker Fun
+## What is this?
+As mentioned before, Docker is an application that runs containers, i.e. small resource environments that emulate virtual machine capabilities. It is considered lightweight and easy to deploy items. It runs images that contain operating systems, applications, and other resources.
+
+
+## Objective
+We will be able to pull images for use within docker, run appropriate docker commands, and create appropriate instructional files for Docker to use.
+
+The project assumes you have already tried to spin up EC2 instances in the past, and have installed Docker before. If not, the section titled "Docker Set Up" will walk you through it.
+
+## Links
+[Techno Tim Docker Tutorial](https://www.youtube.com/watch?v=SnSH8Ht3MIc)
+
+[What is Docker?](https://www.geeksforgeeks.org/introduction-to-docker/)
+
+[NetworkChuck Docker](https://www.youtube.com/watch?v=eGz9DS-aIeY&t=255s)
+
+[Tutorialspoint Docker](https://www.tutorialspoint.com/docker/index.htm)
+
+[DockerHub Repository Site](https://hub.docker.com/)
+
+## Vocabulary
+
+Dockerfile: a file within Docker that a user creates, which defines the image and other specifications that Docker needs to run instructions.
+
+Docker Image: a package of sorts that has all the parts needed to run a piece of software.
+
+Docker-Compose: A plug in component of Docker, this resource allows for YAML files to configure the actions that Docker can undertake within its containers.
+
+Docker Hub: A repository of Docker Images that users can contribute to by pushing to, or pull from. See the links section to take a look.
+
+Apache: Similar to Nginx, Apache is an open source web server.
+
+## Commands
+
+```docker pull```: pulls images from DockerHub for your usage. Pulls the latest version from Docker Hub.
+
+```docker images```: shows what images have been installed with appropriate information. ```docker image rm``` followed by image name would remove the image.
+
+```docker run```: starts up the container (see Docker pulling images and creating images).
+
+```docker stop```: stops container. (followed by container name) or ```docker stop $(docker ps -a -q)``` to stop all.
+
+```docker rm```: removes container. (followed by container name)
+
+```docker restart```: restarts container. (followed by container name)
+
+```docker pause```: pauses container. (followed by container name)
+
+```docker unpause```: unpauses container. (followed by container name)
+
+```docker build```: Builds a custom image based off your dockerfile in the directory. Followed by the name you want your image to have.
+
+```docker ps -aq | xargs docker stop | xargs docker rm```: stops, removes and deletes/kills off all containers.
+
+## Docker Set Up
+ The files in this folder will set up both the Docker application, as well as Docker-Compose plugin (add-on). 
+
+1. Create the Docker_install.sh file within your EC2 instance (Launch and SSH into it prior to this).
+2. ```chmod +x Docker_install.sh```
+3. ```./Docker_install.sh``` which should give you an output of your docker version, as well as saying "Hello from Docker!"
+4. ```sudo groupadd docker``` (if the group is already there, it should give an output of "group 'docker' already exists.)
+5. ```sudo usermod -aG docker``` (with your username after docker with a space) will allow you as a non-root user to access docker. For example, on an Ubuntu EC2 instance, ```sudo usermod -aG docker ubuntu```
+6. ```newgrp docker``` adds a new group. ```exit``` after.
+
+7. ```sudo systemctl enable docker.service```
+8. ```sudo systemctl enable containerd.service```
+9. ```sudo systemctl status docker.service``` checks to see if docker is running.
+
+## Docker Pulling Images and Starting/Stopping Containers using Commands
+_Please make sure the Docker Set Up section is completed prior to this In addition, in your security group, open up port 8080 for this to run. Go to EC2, Security groups, then to whatever group you have with your active ec2, and then edit inbound rules._
+
+In this section, we will pull the nginx image from the Docker Hub repository and start a container.
+
+1. Launch an EC2 instance on AWS, and ssh into it.
+2. Go to [DockerHub Repository Site](https://hub.docker.com/). Click signup and set up your account.
+3. You can use the docker search bar to find nginx. On the right, it will show the command needed to pull the image. This syntax is ```docker pull``` followed by the resource name.
+4. ```docker pull nginx``` to pull the image to your virtual machine.
+5. ```docker images``` to see what images are present.
+6. ```docker run -it -d -p 8080:80 --name web nginx``` is a command to run the nginx image.
+
+To clarify some of these flags,
+
+-it: short for --interactive and -tty. Goes straight into the container.
+
+-d: detached mode, allows the container to run in the background.
+
+-p: allows for input of ports (in this case, the host port of 8080 is "mapped" to port 80 of the container, allowing for web access.)
+
+-web: name of our container (you can change it, if you'd like.)
+
+-nginx: image being used.
+
+7. To see if your security group configuration works, type your EC2 IP address in a browser, followed by the colon and port number (:8080). It should bring up an Nginx default page. For example, if the IP of the EC2 is 1.1.1.1, then it would be 1.1.1.1:8080.
+8. It is possible to "SSH" into the container as well. ```docker exec -it web /bin/bash```. This will allow terminal access within the container. Replace "web" with whatever the anme of your container is. Run```exit``` to leave.
+9. ```docker stop web``` will stop the container.
+
+## Docker Building Images
+Building a Docker image can be done by using a Dockerfile, which is essentially an instruction manual for Docker to follow. You can also use a Docker Compose YAML file that would serve the same purpose. For our example, we will go over both, with example files to match.
+
+### Building an Nginx image using Dockerfile
+1. Within a directory you want to use, ```touch dockerfile```. 
+2. ```nano dockerfile``` to get into it.
+3. Copy and paste the contents of nginx-dockerfile into the file. Save and exit.
+
+
+
+
+
