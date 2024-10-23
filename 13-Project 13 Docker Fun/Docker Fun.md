@@ -62,9 +62,9 @@ Apache: Similar to Nginx, Apache is an open source web server.
 ```docker logs --details```: To check logs of Docker interactions.
 
 ## Docker Set Up
- The files in this folder will set up both the Docker application, as well as Docker-Compose plugin (add-on). 
+ The files in this folder will set up both the Docker application, as well as Docker-Compose plugin (add-on). Launch an EC2 instance first, and SSH into it.
 
-1. Create the Docker_install.sh file within your EC2 instance (Launch and SSH into it prior to this).
+1. Create the Docker_install.sh file within your EC2 instance.
 2. ```chmod +x Docker_install.sh```
 3. ```./Docker_install.sh``` which should give you an output of your docker version, as well as saying "Hello from Docker!"
 4. ```sudo groupadd docker``` (if the group is already there, it should give an output of "group 'docker' already exists.)
@@ -134,7 +134,7 @@ For the example, it pulls the Nginx image (the latest and updated version), copi
 
 4. Make an index.html file for Nginx to use. ```touch index.html```.
 5. Copy and paste the contents of index.html from this project folder into the file within your EC2. Save and exit.
-6. Run ```docker build -t nginx_image``` to create the Docker image. You can name it something else than nginx_image.
+6. Run ```docker build -t nginx_image .``` to create the Docker image. You can name it something else than nginx_image.
 7. Run ```docker images``` to check if it was made.
 8. Run ```docker rmi``` followed by image id will remove the image.
 
@@ -169,8 +169,39 @@ For more detailed reading, click the link below.
 6. ```docker compose down -v``` will stop the container and remove it.
 
 ## Pushing Images to ECR
+You will be creating a repository connected to AWS through your terminal. Make sure you install the AWS CLI into your EC2 Instance. For reference, the install steps from project 9 have been placed below.
+
+### AWS CLI Install
+1. Open up your terminal and go to your home directory. ```cd ~```
+
+2. ```curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"```
+
+3. ```sudo apt install unzip```
+
+4. ```unzip awscliv2.zip```
+
+5. ```sudo ./aws/install``` (It will tell you that you can run ```/usr/local/bin/aws```)
+
+6. ```aws --version``` and it will show you what version of the AWS CLI is installed.
+
+7. ```aws configure``` to put in your access key, secret access key, region, and then you should be able to do the following section.
+
+### Steps to Push Images to ECR
+
+The easiest way to push images is starting off with the AWS console.
+
+1. Go to the AWS dashboard search bar and search "ECR" or Elastic Container Registry. Click on it.
+2. Click "Create Repository." You'll need to add a name space and a repository name.
+3. Check to see if it was created and click on your repository.
+4. Click on "view push commands" for instructions on how to connect ECR to your Docker client.
+5. Copy the first step into your terminal and run the command. The first one should end with a "login succeeded" output.
+6. Since you already built your image, you have to add a tag for identifying the image. run ```docker images``` to see what image you want to tag. The tag command should follow the structure of: ```docker tag imagename:latest accountid.dkr.ecr.us-east-2.amazonaws.com/namespace/repository:latest```
+(replace imagename with the name of your image, accountid with your account number, and namespace and repository name.)
+7. Lastly, run ```docker push accountid.dkr.ecr.us-east-2.amazonaws.com/namespace/repositoryname:latest``` (replace accountid, namespace and repositoryname.) It should show "pushed" in different lines if it goes.
+8. Refresh the AWS images page to see if it was successful.
 
 
+## Exercise:
 
 
 
