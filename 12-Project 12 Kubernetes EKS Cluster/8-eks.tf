@@ -30,7 +30,7 @@ resource "aws_eks_cluster" "eks" {
   vpc_config {
     endpoint_private_access = false
     endpoint_public_access  = true
-#usually endpoint public access would not be set to true.
+#usually endpoint public access would not be set to true. Private access being true means that you'd be able to access it, such as through VPN.
     subnet_ids = [
       aws_subnet.private_zone1.id,
       aws_subnet.private_zone2.id
