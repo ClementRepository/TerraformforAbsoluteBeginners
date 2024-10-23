@@ -93,7 +93,7 @@ eks_version can be checked by running ```kubectl version```.
 The only thing to note besides what we've discussed in previous projects is the region, in which "local.region" is referencing locals.tf, in which the region was noted as us-east-2.
 
 ### File 3: VPC
-Enabling DNS Support and hostnames as true allows you to run add-ons later on. Note the tags this time that references what was inside the locals.tf and env section.
+Enabling DNS Support and hostnames as true allows usage of domain names to communicate with instances, rather than IP addresses. Note the tags this time that references what was inside the locals.tf and env section.
 
 ### File 4: Internet Gateway/IGW
 Much like before, the Internet Gateway references the vpc id in File 3. Other than that, nothing outside the scope of what we've done in the past.
