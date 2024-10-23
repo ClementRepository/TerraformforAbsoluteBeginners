@@ -77,7 +77,7 @@ Apache: Similar to Nginx, Apache is an open source web server.
 
 ## Docker Pulling Images and Starting/Stopping Containers using Commands
 _Please make sure the Docker Set Up section is completed prior to this In addition, in your security group, open up port 8080 for this to run. Go to EC2, Security groups, then to whatever group you have with your active ec2, and then edit inbound rules._
-
+0
 In this section, we will pull the nginx image from the Docker Hub repository and start a container.
 
 1. Launch an EC2 instance on AWS, and ssh into it.
@@ -163,6 +163,7 @@ For more detailed reading, click the link below.
 4. Now that you have the index and docker compose files, ```docker compose up -d``` to start. It will look as follows:
 
 ![alt text](<Nginx docker compose.jpg>)
+
 
 5. ```docker ps -a``` to see the container that was created.
 6. ```docker compose down -v``` will stop the container and remove it.
