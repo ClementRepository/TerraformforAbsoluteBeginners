@@ -68,6 +68,13 @@ You will learn:
 - How to use different Kubernetes commands to configure and monitor containers and pods
 - About the different YAML files that Kubernetes can use to manage resources
 
+## Project 13: Docker Fun
+You will learn:
+- How to pull images from the Docker Repository, Docker Hub.
+- How to build images and start up containers using Docker.
+- How to utilize commands that allow you to monitor your containers.
+- How to push images you have made to the Elastic Container Registry.
+
 # Prerequisite downloads/installs
 If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.
 
