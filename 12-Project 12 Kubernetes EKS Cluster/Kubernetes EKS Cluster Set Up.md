@@ -80,6 +80,8 @@ Cluster Autoscaler: Adjusts the number of nodes in the cluster if pods somehow f
 ## Explanation of Terraform Files
 _VPCs must have two subnets that are in different availability zones(minimum 2 zones). Hence, the subnet (5) file has 2 public and 2 private subnets to work._
 
+_In addition, this doesn't need a security group-generally, the IP would be 172.20.0.0/16 for CIDR block (for EKS). EKS and Terraform work together and have an innate security group._
+
 There are 9 provided Terraform files in this project,  a YAML file that includes the RBAC needed for access, and three nginx YAML files. These Terraform files are numbered for your convenience. It is recommended to have Github open to these files while looking at VSCode for this Markdown file and Alt Tab to read these descriptions and the code in each file.
 
 ### File 1: Locals
