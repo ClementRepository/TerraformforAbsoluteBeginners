@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx
+    container_name: nginx_web
+    ports:
+      - "8080:80"
+    restart: always
+
+#docker compose up -d
+#docker compose down -v
+#docker stop $(docker ps -a -q)
+#docker rm $(docker ps -a -q)

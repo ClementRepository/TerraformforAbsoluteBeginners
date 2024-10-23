@@ -33,6 +33,8 @@ Apache: Similar to Nginx, Apache is an open source web server.
 
 ## Commands
 
+```docker ps``` shows what is running. ```docker compose ps``` is the same, but for resources from compose yaml files.
+
 ```docker pull```: pulls images from DockerHub for your usage. Pulls the latest version from Docker Hub.
 
 ```docker images```: shows what images have been installed with appropriate information. ```docker image rm``` followed by image name would remove the image.
@@ -51,7 +53,13 @@ Apache: Similar to Nginx, Apache is an open source web server.
 
 ```docker build```: Builds a custom image based off your dockerfile in the directory. Followed by the name you want your image to have.
 
-```docker ps -aq | xargs docker stop | xargs docker rm```: stops, removes and deletes/kills off all containers.
+```docker ps -aq | xargs docker stop | xargs docker rm```: stops, removes and deletes/kills off all containers (if dockerfile)
+
+```docker compose up -d```: Docker compose command to start up/run the docker-compose.yml instruction file.
+
+```docker compose down -v```: Docker compose command to stop and remove the created container.
+
+```docker logs --details```: To check logs of Docker interactions.
 
 ## Docker Set Up
  The files in this folder will set up both the Docker application, as well as Docker-Compose plugin (add-on). 
@@ -101,7 +109,66 @@ Building a Docker image can be done by using a Dockerfile, which is essentially 
 ### Building an Nginx image using Dockerfile
 1. Within a directory you want to use, ```touch dockerfile```. 
 2. ```nano dockerfile``` to get into it.
-3. Copy and paste the contents of nginx-dockerfile into the file. Save and exit.
+3. Copy and paste the contents of nginx-dockerfile from this project folder into the file. Save and exit.
+
+![alt text](<Nginx dockerfile example.jpg>)
+
+We will go over some components of a Dockerfile here.
+
+FROM tells us what image is to be used.
+
+RUN will run a command on top of the image, usually to install and set up.
+
+WORKDIR sets the working directory that the Dockerfile will start work in.
+
+ENV sets environment variables.
+
+COPY copies the contents of the first file into the destination listed second.
+
+EXPOSE tells what port to be open/exposed.
+
+CMD is the command that will be followed when the container starts. Only one command can be followed per Dockerfile.
+
+For the example, it pulls the Nginx image (the latest and updated version), copies the contents of index.html (its configuration for the webpage, and puts it within the second path.) It exposes port 8080, and will start a command of running Nginx in the foreground with a "global" configuration.
+
+
+4. Make an index.html file for Nginx to use. ```touch index.html```.
+5. Copy and paste the contents of index.html from this project folder into the file within your EC2. Save and exit.
+6. Run ```docker build -t nginx_image``` to create the Docker image. You can name it something else than nginx_image.
+7. Run ```docker images``` to check if it was made.
+8. Run ```docker rmi``` followed by image id will remove the image.
+
+### Building an Nginx image using Docker Compose
+1. Follow step 4 and 5 of the previous section.
+2. ```touch docker-compose.yml``` to make a docker compose file. Keep in mind that it needs to be spelled out as such.
+3. ```nano docker-compose.yml```. The example docker-compose-nginx.yml file within this project folder has the configuration for you to copy and paste into your own.
+
+![alt text](<Nginx docker compose file example.jpg>)
+
+The components of Docker Compose YAML files may include:
+
+Version: What format this file has so that it can interact with other features.
+
+Services: lists all containers that comprise the application.
+In the services section, it includes the image, the name you want the container to have, what ports to map to, and in this example, the configuration of restarting.
+
+Networks: Shows configuration and communication purposes in between containers.
+
+Volumes: The storage capabilities shared between services.
+
+For more detailed reading, click the link below.
+
+[Tutorialspoint Docker Compose YAML](https://www.tutorialspoint.com/docker/docker_compose.htm)
+
+4. Now that you have the index and docker compose files, ```docker compose up -d``` to start. It will look as follows:
+
+![alt text](<Nginx docker compose.jpg>)
+
+5. ```docker ps -a``` to see the container that was created.
+6. ```docker compose down -v``` will stop the container and remove it.
+
+
+
 
 
 
