@@ -168,7 +168,7 @@ For more detailed reading, click the link below.
 5. ```docker ps -a``` to see the container that was created.
 6. ```docker compose down -v``` will stop the container and remove it.
 
-
+## Pushing Images to ECR
 
 
 
