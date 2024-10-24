@@ -19,6 +19,8 @@ The project assumes you have already tried to spin up EC2 instances in the past,
 
 [DockerHub Repository Site](https://hub.docker.com/)
 
+[AWS ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html)
+
 ## Vocabulary
 
 Dockerfile: a file within Docker that a user creates, which defines the image and other specifications that Docker needs to run instructions.
@@ -29,7 +31,7 @@ Docker-Compose: A plug in component of Docker, this resource allows for YAML fil
 
 Docker Hub: A repository of Docker Images that users can contribute to by pushing to, or pull from. See the links section to take a look.
 
-ECR
+ECR: Elastic Container Registry: A repository that AWS runs that has all the images someone may send. You can also pull images from here.
 
 ## Commands
 
@@ -39,7 +41,7 @@ ECR
 
 ```docker images```: shows what images have been installed with appropriate information. ```docker image rm``` followed by image name would remove the image.
 
-```docker run```: starts up the container and shows outputS (see Docker pulling images and creating images).
+```docker run```: starts up the container and shows outputs (see Docker pulling images and creating images).
 
 ```docker stop```: stops container. (followed by container name) or ```docker stop $(docker ps -a -q)``` to stop all.
 
@@ -69,7 +71,7 @@ ECR
 3. ```./Docker_install.sh``` which should give you an output of your docker version, as well as saying "Hello from Docker!"
 4. ```sudo groupadd docker``` (if the group is already there, it should give an output of "group 'docker' already exists.)
 5. ```sudo usermod -aG docker``` (with your username after docker with a space) will allow you as a non-root user to access docker. For example, on an Ubuntu EC2 instance, ```sudo usermod -aG docker ubuntu```
-6. ```newgrp docker``` adds a new group. ```exit``` after.
+6. ```newgrp docker``` adds a new group. 
 
 7. ```sudo systemctl enable docker.service```
 8. ```sudo systemctl enable containerd.service```
@@ -201,9 +203,33 @@ The easiest way to push images is starting off with the AWS console.
 7. Lastly, run ```docker push accountid.dkr.ecr.us-east-2.amazonaws.com/namespace/repositoryname:latest``` (replace accountid, namespace and repositoryname.) It should show "pushed" in different lines if it goes.
 8. Refresh the AWS images page to see if it was successful.
 
+## Optional Wordpress Creation
+Wordpress is a website management system, commonly used for blogs and website hosting. You can make your own wordpress site using Docker Compose!
 
-## Exercise:
+1. ```mkdir wordpress``` (or any directory name you want)
+2. ```cd wordpress```
+3. touch docker-compose.yml
+4. nano docker-compose.yml
+5. copy the docker-compose-wordpress.yml example in this folder and paste into the docker-compose file from step 4.
+6. ```docker compose up -d```
+7. Go to your web browser and type in the IP address of your EC2 instance, followed by :80 (like 127.0.0.1:80).
+8. It will prompt you to set up the website. This will change anytime you delete that EC2 instance, however!
 
+![alt text](<wordpress docker compose example.jpg>)
 
+Now, let's go over what each section means in the example.
+The db: section under services refers to a database, i.e., what has all the information kept. The Docker image used is MySQL, a common database management application.
 
+The command: section refers to what the yaml file is asking-that mysql will set a password prompt.
 
+Volumes: means where the data will be placed.
+
+Restart: always means that it will always restart.
+
+Environment: is about the variables that MySQL will need. It sets the password, what database is used, what user, etc.
+
+Expose: opens up the ports listed.
+
+Wordpress: explains what image is used, and similar to MySQL, sets up usernames, passwords that are necessary.
+
+For Volumes, usually it would have an attached section about additional storage of data, but for this it's left blank.

@@ -41,7 +41,7 @@ In order to use Kubernetes, you'll need Docker installed on your local computer.
 3. ```./Docker_install.sh``` which should give you an output of your docker version, as well as saying "Hello from Docker!"
 4. ```sudo groupadd docker``` (if the group is already there, it should give an output of "group 'docker' already exists.)
 5. ```sudo usermod -aG docker``` (with your username after docker with a space) will allow you as a non-root user to access docker.
-6. ```newgrp docker``` adds a new group. ```exit``` after.
+6. ```newgrp docker``` adds a new group. 
 
 7. ```sudo systemctl enable docker.service```
 8. ```sudo systemctl enable containerd.service```
