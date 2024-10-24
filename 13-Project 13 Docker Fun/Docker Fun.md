@@ -29,7 +29,7 @@ Docker-Compose: A plug in component of Docker, this resource allows for YAML fil
 
 Docker Hub: A repository of Docker Images that users can contribute to by pushing to, or pull from. See the links section to take a look.
 
-Apache: Similar to Nginx, Apache is an open source web server.
+ECR
 
 ## Commands
 
@@ -39,7 +39,7 @@ Apache: Similar to Nginx, Apache is an open source web server.
 
 ```docker images```: shows what images have been installed with appropriate information. ```docker image rm``` followed by image name would remove the image.
 
-```docker run```: starts up the container (see Docker pulling images and creating images).
+```docker run```: starts up the container and shows outputS (see Docker pulling images and creating images).
 
 ```docker stop```: stops container. (followed by container name) or ```docker stop $(docker ps -a -q)``` to stop all.
 
@@ -74,6 +74,7 @@ Apache: Similar to Nginx, Apache is an open source web server.
 7. ```sudo systemctl enable docker.service```
 8. ```sudo systemctl enable containerd.service```
 9. ```sudo systemctl status docker.service``` checks to see if docker is running.
+10. ```sudo systemctl restart docker``` to apply changes.
 
 ## Docker Pulling Images and Starting/Stopping Containers using Commands
 _Please make sure the Docker Set Up section is completed prior to this In addition, in your security group, open up port 8080 for this to run. Go to EC2, Security groups, then to whatever group you have with your active ec2, and then edit inbound rules._

@@ -46,9 +46,9 @@ In order to use Kubernetes, you'll need Docker installed on your local computer.
 7. ```sudo systemctl enable docker.service```
 8. ```sudo systemctl enable containerd.service```
 9. ```sudo systemctl status docker.service``` checks to see if docker is running.
+10. ```sudo systemctl restart docker``` to apply changes.
 
 
-_Note: You can try running Docker_enable.sh that's attached in this folder instead of using steps 7-9, as it will also give an output of whether docker is running._
 
 ## Installing Kubernetes and Tools
 _The bash script file uses Kubernetes' apt repository to download the public signing key needed for the Kubernetes repository and will install all other necessary items, and then outputs the version._
