@@ -215,6 +215,8 @@ Wordpress is a website management system, commonly used for blogs and website ho
 7. Go to your web browser and type in the IP address of your EC2 instance, followed by :80 (like 127.0.0.1:80).
 8. It will prompt you to set up the website. This will change anytime you delete that EC2 instance, however!
 
+![alt text](<wordpress install.jpg>)
+
 ![alt text](<wordpress docker compose example.jpg>)
 
 Now, let's go over what each section means in the example.
