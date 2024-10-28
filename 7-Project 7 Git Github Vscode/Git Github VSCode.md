@@ -21,11 +21,15 @@ You will be able to download Git and commit your work, create and use a Github a
 
 [git with vscode](https://www.youtube.com/watch?v=i_23KUAEtUM&list=PLj6YeMhvp2S5UgiQnBfvD7XgOMKs3O_G6&index=2)
 
+[How to Get Started with VScode](https://www.youtube.com/watch?v=EUJlVYggR1Y&t=254s)
+
+[NetworkChuck VsCode Guide](https://www.youtube.com/watch?v=1ZfO149BJvg)
+
 [github exercise for pull requests](https://docs.github.com/en/get-started/start-your-journey/hello-world)
 
 ## Vocabulary/Commands:
 
-### Git Commands:
+### Git Commands:0
 ```git --version``` will tell you what version of git has been downloaded.
 
 ```git config``` will set up your git account. (Step 5 of Git Set up)
