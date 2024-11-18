@@ -15,6 +15,8 @@ You will learn about the different aspects of Ansible's tools, and be able to cr
 
 [Network Chuck Ansible](https://youtu.be/5hycyr-8EKs?si=JIFlBxEUFkX1Tb1l)
 
+[Learn Linux TV Ansible](https://www.youtube.com/playlist?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70)
+
 ## Vocabulary
 
 Control Node: The computer that has Ansible installed and sends out commands to other hosts/managed nodes.
@@ -76,4 +78,3 @@ The next one involves installing Nginx at its present state, while the last sect
 
 ![alt text](<Ansible Playbook example.jpg>)
 
-## Ansible Roles
