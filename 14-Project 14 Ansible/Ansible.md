@@ -2,7 +2,7 @@
 ## What is this?
 Ansible is a software resource that can can expedite automation, with tasks such as provisioning instances, configuration and its management, deploying different applications. All of this allows for simplification of more arduous manual tasks, and increases efficiency, making Ansible a useful infrastructure tool. Ansible also uses YAML files.
 
-Using one computer (control node), you would be able to enable automation on multiple other servers.
+Using one computer (control node), you would be able to enable automated tasks on multiple other servers.
 
 For example, if we were to try to start up multiple Ec2 instances, you could start each one at a time. However, Ansible would be able to help start them all at once and manage them. _Terraform is another tool that can instantly be able to start these resources up._
 
@@ -78,3 +78,27 @@ The next one involves installing Nginx at its present state, while the last sect
 
 ![alt text](<Ansible Playbook example.jpg>)
 
+ ## How to use Ansible to install Nginx on another VM
+ _Make sure you have Ansible installed on your local computer first._
+ 1. First, start up an Ec2 instance. Make note of its public IP address.
+ 2. On your Tabby terminal, have two tabs open: one for your local computer, and one that you will use to access the Ec2 instance mentioned in step 1.
+ 3. In the first tab on your local computer, make sure you have ansible installed. In the second tab, ```ssh ubuntu@3.15.14.189``` (replace the IP address in this example with your Ec2 instance IP address.)
+ 4. Install Ansible on the Ec2 instance using the steps listed in the "Installing Ansible" section of this guide. (you can ```ansible --version``` to check if it was installed correctly.)
+ 5. Going back to your home computer terminal, ```cd /etc/ansible``` and ```ls``` after. It should show the ansible.cfg file, as well as hosts.
+ 6. ```sudo nano hosts``` to get into the hosts file.
+ 7. Type in a name for your Ec2 instance within square brackets, such as [webservers].
+ 8. Under that line, type in a label for your VM, such as webserver1, followed by ansible_host=3.15.14.189 as shown in the example (but change the IP.)
+ 8. Skip a line and add [webservers:vars] within square backets.
+ 9. Under that, add in your information about your private key path as shown below. Example should be replaced by your username. Bear in mind that ansible_user=ubuntu because that's the main user for your operating system, Ubuntu.
+
+ ![alt text](<Ansible hosts example2.jpg>)
+
+10. Exit out of the hosts file after saving.
+11. Create a yaml file for installing nginx. ```touch install_nginx.yaml``` within the ansible directory.
+12. ```sudo nano install_nginx.yaml```, and copy the example (after changing the hosts: section to reflect what you named your Ec2 instance(s).) For our example, would be hosts: webservers. Then paste into the yaml file, save and exit.
+13. ```ansible all -i hosts -m ping``` would then test the connectivity between your home computer and the Ec2 instance. If it doesn't work, you'll receive an error message. If it works, it will say "success."
+14. Then, run the playbook by using ```ansible-playbook -i hosts install_nginx.yaml```.
+15. If it is completed successfully, make sure you run ```sudo systemctl status nginx``` on the Ec2 instance to see if it is running and enabled.
+
+## Ansible Playbook exercise
+1. Create a playbook that will install htop. From your local computer, run the a playbook that will install htop on two different ec2 instances. 

@@ -1,0 +1,8 @@
+---
+- name: Install htop on Ec2 instances
+  hosts: all
+  become: yes
+  tasks:
+      apt:
+        name: htop
+        state: present
