@@ -7,7 +7,7 @@ Using one computer (control node), you would be able to enable automated tasks o
 For example, if we were to try to start up multiple Ec2 instances, you could start each one at a time. However, Ansible would be able to help start them all at once and manage them. _Terraform is another tool that can instantly be able to start these resources up._
 
 ## Objective
-You will learn about the different aspects of Ansible's tools, and be able to create your own inventory and playbook after installing all the necessary prerequisites.
+You will learn about the different aspects of Ansible playbooks and inventory files, and use that knowledge to create your own.
 
 
 ## Links

@@ -11,7 +11,7 @@ You will learn:
 - How to install Tabby Terminal
 
 ## Project 3: Sign up for Amazon Web Services
-_Note: You will have to sign up with a credit card that will be attached to the account. Charges may apply when completing later exercises._
+_Note: You will have to sign up with a credit card that will be attached to the account. Charges may apply when completing later exercises, but it does have a free tier from which most work done would be free of charge._
 You will learn:
 - How to sign up for an AWS account
 - How to create a key pair
@@ -74,6 +74,11 @@ You will learn:
 - How to build images and start up containers using Docker.
 - How to utilize commands that allow you to monitor your containers.
 - How to push images you have made to the Elastic Container Registry.
+
+## Project 14: Ansible
+You will learn:
+- How to create and format playbooks and inventory files.
+- How to have Ansible interact with Ec2 instances remotely and use playbooks.
 
 # Prerequisite downloads/installs
 If you do not have a Github account to clone the repository, Project 7 has relevant info on how to do so.
