@@ -59,9 +59,9 @@ At its core, Ansible would need several files created by a user to operate: the 
 
 ![alt text](<Ansible hosts ini.jpg>)
 
-In this particular example (with INI format), we have two yellow bracketed heading blocks. The first one, ec2_instances, refers to the group name. Underneath the brackets is a particular list of nodes, or hosts. In this example, the ansible_host equates to the IP address of an EC2 instance that has been started. Bear in mind, explicitly typing out ansible_host isn't necessary. What is required is at least the IP address.
+In this particular example (with INI format), we have two yellow bracketed heading blocks. The first one, ec2_instances, refers to the group name. You can name it anything you like, as it refers to a group. Underneath the brackets is a particular list of nodes, instances, or hosts. In this example, the ansible_host equates to the IP address of an EC2 instance that will be controlled. Bear in mind, explicitly typing out ansible_host isn't necessary. What is required is at least the IP address. The ec2-instance in the same line can be renamed to something else, like instance1.
 
-The second yellow bracket section dictates variables that the user can input. The ansible user is ubuntu (the operating system of the EC2 instance that was started up.) In addition, having the ssh_private_key_file parameter allows for ansible to replicate the private key path on your local computer.
+The second yellow bracket section dictates variables that the user can input. The ansible user is ubuntu (the operating system of the EC2 instance that was started up.) In addition, having the ssh_private_key_file parameter allows for ansible to replicate the private key path on your local computer. This allows the Ec2 instance to know that the master node (your local computer) has all the relevant information to operate the other nodes that are listed under the first set of brackets.
 
 _Note that "example" in that path is a placeholder for your username._
 
