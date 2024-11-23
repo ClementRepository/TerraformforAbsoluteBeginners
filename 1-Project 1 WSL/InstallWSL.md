@@ -14,4 +14,4 @@ You will be able to install WSL or Windows Subsystem for Linux on your Windows c
 6. Go to the searchbar again, type "store", click microsoft store.
 7. In the next searchbar, type "ubuntu", select it, and press get.
 8. Go to your Windows searchbar and type ubuntu, and start it. It will ask you to set up a username and password.
-7. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal for the next tasks.
+9. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal for the next tasks.
