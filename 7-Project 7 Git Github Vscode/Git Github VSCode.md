@@ -75,8 +75,8 @@ Source Control: The third option on the left of VsCode that tracks your changes,
 2. Install Git.
 3. Open up Tabby Terminal or any terminal that can run WSL.
 4. run the command ```git --version``` (If it has an output of git followed by a version, you're good to go!)
-5. To configure git, run the command ```git config --global user.name``` followed by your desired username in the same command in quotation marks. ("username")
-6. Next, run the command ```git config --global user.email``` followed by your email in this command in quotation marks. ("example@gmail.com")
+5. To configure git, run the command ```git config --global user.name``` followed by your desired username in the same command in quotation marks. (Example: ```git config --global user.name Testuser```)
+6. Next, run the command ```git config --global user.email``` followed by your email in this command in quotation marks. (Example: ```git config --global user.email example@yahoo.com```)
 7. Now, make a directory and change to that directory ```mkdir newdirectory``` and ```cd newdirectory```
 8. Run ```git init``` to start git. It should say that it initialized an empty Git repository in a specific path.
 9. Make any file and save. 
@@ -189,5 +189,5 @@ Prior to changing the contents of these files (assuming your Github account is n
 
 _**Troubleshooting Note: Sometimes there's an error that states that git username and email haven't been set up despite doing so earlier in the steps when you try to commit from VsCode.**_
 
-_Do ```git config --global -e``` in your terminal and it will open up a text editor that will allow you to change your username and email with the global option manually. Ctrl x, then y to leave and save that._
+_Do ```git config --global -e``` in your terminal and it will open up a text editor that will allow you to change your username and email with the global option manually. Ctrl x, then y to leave and save that. You can also view your git username and email by doing ```git config --list```._
 
