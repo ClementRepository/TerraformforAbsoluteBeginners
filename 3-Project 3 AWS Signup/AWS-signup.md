@@ -34,8 +34,10 @@ You will be able sign up for an AWS account, find your public key, and import yo
 8. Enter a name for your key pair.
 9. Open up your tabby terminal if you haven't. Type ```wsl``` to start WSL.
 10. Type ```cd ~``` to go to your home directory.
-11. Type ```cd .ssh``` to go into your ssh directory.
+11. Type ```cd .ssh``` to go into your ssh directory.* (See Note at the bottom of the instructions if you don't see .ssh)
 12. Type ```ls``` to see files in there. You will see id_ed25519.pub, which is where your public key is located.
 13. Type ```cat id_ed25519.pub```
 14. Copy and then paste the output of step 13 into the "import key pair" (key pair file) box. 
 15. Additionally, you can add a tag to the key pair. Then, click "import key pair" to finalize your key pair connection.
+
+_Note: * For Step 11, if your terminal does not show a .ssh directory, you can create a key pair using the command ```ssh-keygen```. Press enter to make the file, you can add a passphrase when it asks for security purposes as well. Copy the key fingerprint it gives you. Now you can change directory to .ssh and follow from steps 12 onward._

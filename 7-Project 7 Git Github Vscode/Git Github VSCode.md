@@ -75,8 +75,8 @@ Source Control: The third option on the left of VsCode that tracks your changes,
 2. Install Git.
 3. Open up Tabby Terminal or any terminal that can run WSL.
 4. run the command ```git --version``` (If it has an output of git followed by a version, you're good to go!)
-5. To configure git, run the command ```git config --global user.name``` followed by your desired username in the same command.
-6. Next, run the command ```git config --global user.email``` followed by your email in this command.
+5. To configure git, run the command ```git config --global user.name``` followed by your desired username in the same command in quotation marks. ("username")
+6. Next, run the command ```git config --global user.email``` followed by your email in this command in quotation marks. ("example@gmail.com")
 7. Now, make a directory and change to that directory ```mkdir newdirectory``` and ```cd newdirectory```
 8. Run ```git init``` to start git. It should say that it initialized an empty Git repository in a specific path.
 9. Make any file and save. 
