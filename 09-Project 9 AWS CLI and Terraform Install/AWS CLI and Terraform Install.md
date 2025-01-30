@@ -2,7 +2,7 @@
 ## What is this?
 Terraform is an example of "Infrastructure as Code" software that allows users to set a blueprint for their work and be re-configured across different sources to be re-used. (Basically, allowing you to set up everything once and not need to create everything manually again.)
 
-The AWS CLI is Amazon's application that allows the user to configure and manage their AWS resources within their own local terminal.
+The AWS CLI (Command Line Interface) is Amazon's application that allows the user to configure and manage their AWS resources within their own local terminal.
 
 ## Objective
 You will be able to install and configure both AWS CLI and Terraform. 
