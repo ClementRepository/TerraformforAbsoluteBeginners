@@ -11,7 +11,7 @@ You will be able to install WSL or Windows Subsystem for Linux on your Windows c
 3. In your windows search bar (bottom of your screen), type in "command prompt", or "powershell." Click on the result.
 4. type in the command ```wsl --install```
 5. You'll need to restart your computer after installing.
-6. Go to the searchbar again, type "store", click microsoft store.
-7. In the next searchbar, type "ubuntu", select it, and press get.
-8. Go to your Windows searchbar and type ubuntu, and start it. It will ask you to set up a username and password.
+6. Go to the search bar again, type "store", click microsoft store.
+7. In the next search bar, type "ubuntu", select it, and press get.
+8. Go to your Windows searc hbar and type ubuntu, and start it. It will ask you to set up a username and password.
 9. Go to the Project 2 folder in this repository to learn how to install Tabby Terminal for the next tasks.
