@@ -86,7 +86,7 @@ If you do not have a Github account to clone the repository, Project 7 has relev
 
 
 
-# Further Reading and Helpful Links
+# Further Reading and Helpful Links (Free)
 
 ## Links for learning Linux
 [linuxjourney](https://linuxjourney.com/)
