@@ -8,12 +8,13 @@ AWS has resources that are under the "Free Tier," of which you can use for free 
 ## Objective
 You will be able sign up for an AWS account, find your public key, and import your public key into the AWS account. This will allow you to connect to AWS in other projects through your terminal.
 
-## Vocabulary/Additional Reading
+## Vocabulary/Additional Reading (Links posted below)
 - Key pair: [Key Pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) Do not ever share your private key.
 - Directory: a folder or container in your computer that organizes files and other directories.
 - Ssh: also called secure shell, where it is used to access/login remotely from another device.
 - Output: the information that is displayed when you execute a command in the terminal.
 - Tag: [Tag](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/what-are-tags.html) In AWS, assigning a tag (name) to an item, such as a key pair, will allow for better management and organization of resources.
+- Cloud: [Cloud](https://www.cloudflare.com/learning/cloud/what-is-the-cloud/) A network of servers that store and process data for other devices.
 
 ## Terminal Linux Commands to Practice (description in parentheses)
 - ```wsl``` (typing wsl when starting your tabby terminal will start up wsl)
