@@ -14,6 +14,8 @@ This guide assumes you have never installed WSL on your computer. WSL allows any
 - Operating System(OS): software that supports a computer's basic functions
 - WSL: Windows Subsystem for Linux, this allows you to run Linux on a Windows OS
 - Distribution: OS that is a copy of another (For example, Ubuntu is a copy of Linux, think of it as a type of Linux.)
+- Linux: A type of popular OS commonly used in the tech world (besides Windows)
+- Ubuntu: A free OS based on Linux
 
 ## Objective
 You will be able to install WSL or Windows Subsystem for Linux on your Windows computer.
