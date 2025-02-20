@@ -5,7 +5,9 @@ This guide assumes you have never installed WSL on your computer. WSL allows any
 
 ## Links
 [What is Linux and What is a Distro](https://www.youtube.com/watch?v=meAGfhD3_ww)
+
 [What is WSL](https://www.youtube.com/watch?v=NYGMY9c90Oo)
+
 [About WSL](https://learn.microsoft.com/en-us/windows/wsl/about)
 
 ## Vocabulary
